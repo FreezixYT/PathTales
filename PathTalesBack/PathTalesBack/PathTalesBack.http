@@ -1,0 +1,6 @@
+@PathTalesBack_HostAddress = http://localhost:5038
+
+GET {{PathTalesBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
