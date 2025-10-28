@@ -1,0 +1,39 @@
+services:
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./mongo/datadb:/data/db
+      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: testdb
+    networks:
+      - pathTales-network
+
+  mongo-express:
+    image: mongo-express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+      ME_CONFIG_MONGODB_URL: mongodb://admin:admin@mongo:27017/
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - pathTales-network
+
+networks:
+  pathTales-network:
+    driver: bridge

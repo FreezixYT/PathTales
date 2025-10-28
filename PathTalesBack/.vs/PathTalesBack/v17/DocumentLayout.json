@@ -1,12 +1,156 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\pathtalesback.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\pathtalesback.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "PathTalesBack\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\appsettings.Development.json",
+              "RelativeToolTip": "PathTalesBack\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-28T09:42:09.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PathTalesBack.http",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\PathTalesBack.http",
+              "RelativeDocumentMoniker": "PathTalesBack\\PathTalesBack.http",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\PathTalesBack.http",
+              "RelativeToolTip": "PathTalesBack\\PathTalesBack.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-10-28T09:42:02.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Program.cs",
+              "RelativeDocumentMoniker": "PathTalesBack\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Program.cs",
+              "RelativeToolTip": "PathTalesBack\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:16:29.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "PathTalesBack\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "PathTalesBack\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:16:19.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "PathTalesBack\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "PathTalesBack\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T10:13:07.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "PathTalesBack\\Entities\\Customer.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Entities\\Customer.cs",
+              "RelativeToolTip": "PathTalesBack\\Entities\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T09:18:49.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MongoDbService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Data\\MongoDbService.cs",
+              "RelativeDocumentMoniker": "PathTalesBack\\Data\\MongoDbService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Data\\MongoDbService.cs",
+              "RelativeToolTip": "PathTalesBack\\Data\\MongoDbService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T09:12:42.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\appsettings.json",
+              "RelativeDocumentMoniker": "PathTalesBack\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\appsettings.json",
+              "RelativeToolTip": "PathTalesBack\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-28T08:55:07.881Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
