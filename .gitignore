@@ -16,7 +16,7 @@ PathTalesBack/.vs/PathTalesBack/FileContentIndex/b11baebe-cedc-479a-b493-d594379
 *.suo
 *.user
 *.sln.docstates
-
+*.vs
 # Build results
 
 [Dd]ebug/
