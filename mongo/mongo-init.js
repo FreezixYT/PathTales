@@ -1,4 +1,7 @@
 // Ce modèle représente les utilisateurs (visiteurs authentifiés et administrateurs).
+
+console.log("-- Start --");
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -13,7 +16,7 @@ const UserSchema = new Schema({
   timestamps: true,
 });
 
-module.exports = mongoose.model('User', UserSchema);
+
 
 // Ce modèle gère les histoires interactives créées par les utilisateurs.
 
@@ -33,7 +36,7 @@ const StorySchema = new Schema({
   timestamps: true,
 });
 
-module.exports = mongoose.model('Story', StorySchema);
+
 
 //Ce modèle représente les paragraphes d'une histoire.
 const ChoiceSchema = require('./ChoiceSchema');
@@ -66,7 +69,7 @@ const ParagraphSchema = new Schema({
   },
   endingType: { type: String, enum: ['victory', 'defeat', 'neutral'], default: null },
 });
-module.exports = mongoose.model('Paragraph', ParagraphSchema);
+
 
 //Sous-schéma pour les choix des paragraphes.
 
@@ -75,7 +78,6 @@ const ChoiceSchema = new Schema({
   nextParagraphId: { type: Schema.Types.ObjectId, ref: 'Paragraph', required: true },
 });
 
-module.exports = ChoiceSchema;
 
 const ReportSchema = new Schema({
   storyId: { type: Schema.Types.ObjectId, ref: 'Story', required: true },
@@ -86,4 +88,8 @@ const ReportSchema = new Schema({
   timestamps: true,
 });
 
+module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Story', StorySchema);
+module.exports = mongoose.model('Paragraph', ParagraphSchema);
+module.exports = ChoiceSchema;
 module.exports = mongoose.model('Report', ReportSchema);

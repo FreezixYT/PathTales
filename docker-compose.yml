@@ -34,6 +34,21 @@ services:
     networks:
       - pathTales-network
 
+  node:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./mongo:/app
+    command: sh -c "npm install && node mongo-init.js"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://admin:admin@mongo:27017/testdb
+    networks:
+      - pathTales-network
+
+
 networks:
   pathTales-network:
     driver: bridge
