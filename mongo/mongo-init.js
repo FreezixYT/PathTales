@@ -1,95 +1,160 @@
-// Ce modèle représente les utilisateurs (visiteurs authentifiés et administrateurs).
-
-console.log("-- Start --");
-
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-const UserSchema = new Schema({
-  name: { type: String, required: true, trim: true },
-  email: { type: String, required: true, unique: true, trim: true },
-  password: { type: String, required: true },
-  role: { type: String, enum: ['member', 'admin'], default: 'member' },
-  isBlocked: { type: Boolean, default: false },
-  blockReason: { type: String, default: null },
-}, {
-  timestamps: true,
-});
-
-
-
-// Ce modèle gère les histoires interactives créées par les utilisateurs.
-
-const StorySchema = new Schema({
-  title: { type: String, required: true, trim: true, maxlength: 150 },
-  description: { type: String, trim: true, maxlength: 500 },
-  paragraphs: [{ type: Schema.Types.ObjectId, ref: 'Paragraph' }],
-  userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  status: { type: String, enum: ['published', 'hidden', 'deleted'], default: 'published' },
-  categories: [{ type: String }],
-  readCount: { type: Number, default: 0 },  
-  ratings: [{
-    userId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    score: { type: Number, min: 1, max: 5, required: true },
-  }],
-}, {
-  timestamps: true,
-});
-
-
-
-//Ce modèle représente les paragraphes d'une histoire.
-const ChoiceSchema = require('./ChoiceSchema');
-
-const ParagraphSchema = new Schema({
-  text: { type: String, required: true, trim: true, maxlength: 1000 },
-  // La liste des choix proposés à la fin de ce paragraphe
-  choices: {
-    type: [ChoiceSchema], // Chaque choix suit la structure définie dans le fichier "ChoiceSchema"
-    default: [], // Par défaut, un paragraphe n’a pas de choix
-
-    // Validation personnalisée des choix selon que le paragraphe est une fin ou pas
-    validate: {
-      validator: function (val) {
-        // Si le paragraphe est une fin (victory, defeat ou neutral)
-        if (this.endingType) {
-          return val.length === 0; // Alors il ne doit contenir aucun choix
-        } else {
-          // Sinon (paragraphe intermédiaire), il doit avoir entre 2 et 4 choix
-          return val.length >= 2 && val.length <= 4;
+// User
+db.createCollection("User", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["name", "email"],
+      properties: {
+        name: {
+          bsonType: "string",
+        },
+        email: {
+          bsonType: "string",
+        },
+        password: {
+          bsonType: "string"
+        },
+        role: {
+          enum: ["member", "admin"],
+        },
+        isBlocked: {
+          bsonType: "bool",
+        },
+        blockReason: {
+          bsonType: "string",
         }
-      },
-      // Message d’erreur affiché si la validation échoue
-      message: props => {
-        return props.value.length === 0
-          ? 'Un paragraphe sans fin doit contenir entre 2 et 4 choix.'
-          : 'Un paragraphe de fin ne doit contenir aucun choix.';
       }
     }
-  },
-  endingType: { type: String, enum: ['victory', 'defeat', 'neutral'], default: null },
+  }
 });
 
-
-//Sous-schéma pour les choix des paragraphes.
-
-const ChoiceSchema = new Schema({
-  text: { type: String, required: true, trim: true, maxlength: 200 },
-  nextParagraphId: { type: Schema.Types.ObjectId, ref: 'Paragraph', required: true },
+// Story
+db.createCollection("Story", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["title", "userId"],
+      properties: {
+        title: {
+          bsonType: "string",
+          maxLength: 150
+        },
+        description: {
+          bsonType: "string",
+          maxLength: 500
+        },
+        paragraphs: {
+          bsonType: "array",
+          items: {
+            bsonType: "objectId"
+          }
+        },
+        status: {
+          enum: ["published", "hidden", "deleted"]
+        },
+        categories: {
+          bsonType: "array",
+          items: {
+            bsonType: "string"
+          }
+        },
+        readCount: {
+          bsonType: "int",
+        },
+        ratings: {
+          bsonType: "array",
+          items: {
+            bsonType: "object",
+            required: ["userId", "score"],
+            properties: {
+              userId: {
+                bsonType: "objectId"
+              },
+              score: {
+                bsonType: "int",
+                minimum: 1,
+                maximum: 5
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 });
 
-
-const ReportSchema = new Schema({
-  storyId: { type: Schema.Types.ObjectId, ref: 'Story', required: true },
-  reportedBy: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-  reason: { type: String, required: true, maxlength: 500 },
-  status: { type: String, enum: ['pending', 'resolved'], default: 'pending' },
-}, {
-  timestamps: true,
+// Paragraph
+db.createCollection("Paragraph", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["text", ""],
+      properties: {
+        text: {
+          bsonType: "string",
+          maxLength: 1000
+        },
+        choices: {
+          bsonType: "array",
+          minItems: 2,
+          maxItems: 4,
+          items: {
+            bsonType: "object",
+            required: ["text", "nextParagraphId"],
+            properties: {
+              text: {
+                bsonType: "string",
+                maxLength: 200
+              },
+              nextParagraphId: {
+                bsonType: "objectId"
+              }
+            }
+          }
+        },
+        endingType: {
+          enum: ["victory", "defeat", "neutral"]
+        }
+      }
+    },
+    if: {
+      properties: {
+        endingType: {
+          enum: ["victory", "defeat", "neutral"]
+        }
+      }
+    },
+    then: {
+      properties: {
+        choices: {
+          bsonType: "array",
+          maxItems: 0,
+        }
+      }
+    }
+  }
 });
 
-module.exports = mongoose.model('User', UserSchema);
-module.exports = mongoose.model('Story', StorySchema);
-module.exports = mongoose.model('Paragraph', ParagraphSchema);
-module.exports = ChoiceSchema;
-module.exports = mongoose.model('Report', ReportSchema);
+db.createCollection("Report", {
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["storyId", "reportedBy", "reason"],
+      properties: {
+        storyId: {
+          bsonType: "objectId"
+        },
+        reportedBy: {
+          bsonType: "objectId"
+        },
+        reason: {
+          bsonType: "string",
+          maxLength: 500
+        },
+        status: {
+          enum: ["pending", "resolved"]
+        }
+      }
+    }
+  }
+});

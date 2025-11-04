@@ -13,11 +13,9 @@ services:
       - ./mongo/datadb:/data/db
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: admin
-      MONGO_INITDB_DATABASE: testdb
+      MONGO_INITDB_DATABASE: pathTales
     networks:
-      - pathTales-network
+      - insta-network
 
   mongo-express:
     image: mongo-express
@@ -32,23 +30,8 @@ services:
       mongo:
         condition: service_healthy
     networks:
-      - pathTales-network
-
-  node:
-    image: node:18-alpine
-    working_dir: /app
-    volumes:
-      - ./mongo:/app
-    command: sh -c "npm install && node mongo-init.js"
-    depends_on:
-      mongo:
-        condition: service_healthy
-    environment:
-      MONGO_URI: mongodb://admin:admin@mongo:27017/testdb
-    networks:
-      - pathTales-network
-
+      - insta-network
 
 networks:
-  pathTales-network:
+  insta-network:
     driver: bridge

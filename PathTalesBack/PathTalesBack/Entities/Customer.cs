@@ -10,7 +10,7 @@ namespace PathTalesBack.Entities
         public string? Id { get; set; }
 
         [BsonElement("customer_name"), BsonRepresentation(BsonType.String)]
-        public string? CustomerName { get; set; }
+        public string? UserName { get; set; }
         [BsonElement("email"), BsonRepresentation(BsonType.String)]
         public string? Email { get; set; }
 
