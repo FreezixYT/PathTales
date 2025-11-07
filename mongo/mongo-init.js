@@ -14,6 +14,9 @@ db.createCollection("User", {
         password: {
           bsonType: "string"
         },
+        token: {
+          bsonType: "string"
+        },
         role: {
           enum: ["member", "admin"],
         },

@@ -17,6 +17,10 @@ namespace PathTalesBack.Entities
         [BsonElement("password"), BsonRepresentation(BsonType.String)]
         public string? Email { get; set; }
 
+        //token 
+        [BsonElement("token"), BsonRepresentation(BsonType.String)]
+        public string? Token { get; set; } = null;
+
         //role
         [BsonElement("role"), BsonRepresentation(BsonType.String)]
         public string? Role { get; set; }

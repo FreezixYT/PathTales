@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|solutionrelative:pathtalesback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69261C9A-2564-4FD9-96A9-1D144EA0EE6C}|PathTalesBack\\PathTalesBack.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesback\\pathtalesback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "PathTalesBack\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Controllers\\UserController.cs",
               "RelativeToolTip": "PathTalesBack\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T08:15:52.659Z",
               "EditorCaption": ""
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "PathTalesBack\\Entities\\User.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Entities\\User.cs",
               "RelativeToolTip": "PathTalesBack\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-04T07:40:27.503Z",
               "EditorCaption": ""
@@ -76,19 +76,21 @@
               "RelativeToolTip": "PathTalesBack\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T09:42:09.018Z"
+              "WhenOpened": "2025-10-28T09:42:09.018Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Program.cs",
               "RelativeDocumentMoniker": "PathTalesBack\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Program.cs",
               "RelativeToolTip": "PathTalesBack\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T10:16:29.63Z"
+              "WhenOpened": "2025-10-28T10:16:29.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -100,24 +102,25 @@
               "RelativeToolTip": "PathTalesBack\\Entities\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T09:18:49.351Z"
+              "WhenOpened": "2025-10-28T09:18:49.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MongoDbService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Data\\MongoDbService.cs",
               "RelativeDocumentMoniker": "PathTalesBack\\Data\\MongoDbService.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\Data\\MongoDbService.cs",
               "RelativeToolTip": "PathTalesBack\\Data\\MongoDbService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T09:12:42.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesBack\\PathTalesBack\\appsettings.json",
               "RelativeDocumentMoniker": "PathTalesBack\\appsettings.json",

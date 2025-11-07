@@ -19,6 +19,10 @@ namespace PathTalesBack.Controllers
             _users = mongoDbService.Database?.GetCollection<User>("test");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IEnumerable<User>> Get()
         {
