@@ -1,0 +1,57 @@
+# Docker Compose pour la stack de documentation
+# Stack complètement indépendante et portable
+# Usage: docker-compose up (depuis le dossier docs/)
+# Génère automatiquement HTML + PDF et lance le serveur HTTP
+
+services:
+  # Service Doxygen pour générer la documentation HTML + LaTeX
+  doxygen:
+    build:
+      context: ../
+      dockerfile: docs/doxygen/Dockerfile.doxygen
+    container_name: pathTales-docs-doxygen
+    volumes:
+      # Montage du code source (lecture seule)
+      - ../:/docs:ro
+      # Montage du dossier de sortie (lecture/écriture)
+      - ./doxygen-output:/docs/docs/doxygen-output
+    working_dir: /docs
+    command: doxygen docs/doxygen/Doxyfile
+    networks:
+      - docs-network
+
+  # Service pour compiler le PDF automatiquement
+  pdflatex:
+    build:
+      context: ../
+      dockerfile: docs/doxygen/Dockerfile.doxygen
+    container_name: pathTales-docs-pdflatex
+    volumes:
+      - ./doxygen-output/latex:/work
+    working_dir: /work
+    command: >
+      sh -c "pdflatex -interaction=nonstopmode refman.tex && 
+             pdflatex -interaction=nonstopmode refman.tex"
+    depends_on:
+      doxygen:
+        condition: service_completed_successfully
+    networks:
+      - docs-network
+
+  # Serveur HTTP pour visualiser la documentation HTML
+  http-server:
+    image: nginx:alpine
+    container_name: pathTales-docs-server
+    ports:
+      - "8090:80"
+    volumes:
+      - ./doxygen-output/html:/usr/share/nginx/html:ro
+    depends_on:
+      doxygen:
+        condition: service_completed_successfully
+    networks:
+      - docs-network
+
+networks:
+  docs-network:
+    driver: bridge

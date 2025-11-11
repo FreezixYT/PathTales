@@ -1,0 +1,132 @@
+@startuml class-diagram
+
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam backgroundColor white
+
+' Modèle de domaine
+package "Models" #DDFFDD {
+    class Post {
+        + Id : int
+        + Title : string
+        + Content : string
+        + Author : string
+        + CreatedAt : DateTime
+        + UpdatedAt : DateTime?
+    }
+}
+
+' DTOs
+package "DTOs" #FFDDDD {
+    class PostDto {
+        + Id : int
+        + Title : string
+        + Content : string
+        + Author : string
+        + CreatedAt : DateTime
+        + UpdatedAt : DateTime?
+    }
+    
+    class PostCreateDto {
+        + Title : string
+        + Content : string
+        + Author : string
+    }
+    
+    class PostUpdateDto {
+        + Title : string
+        + Content : string
+    }
+    
+    class VersionResponse {
+        + Version : string
+        + Environment : string
+        + Timestamp : DateTime
+    }
+}
+
+' Repositories (Interface + Implémentation)
+package "Repositories" #DDDDFF {
+    interface IPostRepository {
+        + GetAllAsync() : Task<List<Post>>
+        + GetByIdAsync(id: int) : Task<Post?>
+        + CreateAsync(post: Post) : Task<Post>
+        + UpdateAsync(post: Post) : Task<Post?>
+        + DeleteAsync(id: int) : Task<bool>
+    }
+    
+    class PostRepository {
+        - _context : BlogDbContext
+        + GetAllAsync() : Task<List<Post>>
+        + GetByIdAsync(id: int) : Task<Post?>
+        + CreateAsync(post: Post) : Task<Post>
+        + UpdateAsync(post: Post) : Task<Post?>
+        + DeleteAsync(id: int) : Task<bool>
+    }
+    
+    class InMemoryPostRepository {
+        - _posts : List<Post>
+        - _nextId : int
+        + GetAllAsync() : Task<List<Post>>
+        + GetByIdAsync(id: int) : Task<Post?>
+        + CreateAsync(post: Post) : Task<Post>
+        + UpdateAsync(post: Post) : Task<Post?>
+        + DeleteAsync(id: int) : Task<bool>
+    }
+}
+
+' Persistence
+package "Persistence" #FFFFDD {
+    class BlogDbContext {
+        + Posts : DbSet<Post>
+        + BlogDbContext(options)
+        # OnModelCreating(builder)
+    }
+}
+
+' Controllers
+package "Controllers" #FFDDFF {
+    class PostsController {
+        - _repository : IPostRepository
+        + GetPosts() : Task<ActionResult<List<PostDto>>>
+        + GetPost(id: int) : Task<ActionResult<PostDto>>
+        + CreatePost(dto: PostCreateDto) : Task<ActionResult<PostDto>>
+        + UpdatePost(id: int, dto: PostUpdateDto) : Task<ActionResult<PostDto>>
+        + DeletePost(id: int) : Task<IActionResult>
+    }
+    
+    class VersionController {
+        + GetVersion() : ActionResult<VersionResponse>
+    }
+}
+
+' Relations
+PostRepository ..|> IPostRepository : implements
+InMemoryPostRepository ..|> IPostRepository : implements
+PostRepository --> BlogDbContext : uses
+BlogDbContext --> Post : manages
+PostsController --> IPostRepository : depends on
+PostsController ..> PostDto : returns
+PostsController ..> PostCreateDto : receives
+PostsController ..> PostUpdateDto : receives
+VersionController ..> VersionResponse : returns
+
+' Notes
+note right of IPostRepository
+  Pattern Repository
+  Abstraction de la
+  couche d'accès aux données
+end note
+
+note bottom of BlogDbContext
+  Entity Framework Core
+  Context pour MariaDB
+end note
+
+note top of PostsController
+  API REST avec
+  opérations CRUD complètes
+end note
+
+@enduml

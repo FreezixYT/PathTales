@@ -1,0 +1,106 @@
+@startuml communication-diagram
+
+!theme plain
+skinparam shadowing false
+skinparam backgroundColor white
+
+title Mise à jour d'un article existant (PUT /api/posts/{id})\nDiagramme de Communication
+
+object ":Client" as Client #LightBlue
+object ":PostsController" as Controller #Yellow
+object ":IPostRepository" as IRepo #LightGreen
+object ":PostRepository" as Repo #Orange
+object ":BlogDbContext" as DbContext #Pink
+object ":Post (existing)" as ExistingPost #Wheat
+object ":Post (updated)" as UpdatedPost #Wheat
+object ":MariaDB" as Database #Red
+
+' Flux de messages numérotés
+Client -> Controller : 1: PUT /api/posts/5\n{PostUpdateDto}
+note right
+  {
+    "title": "Nouveau titre",
+    "content": "Nouveau contenu",
+    "author": "Auteur modifié"
+  }
+end note
+
+Controller -> Controller : 2: Valider PostUpdateDto
+note bottom
+  [Required], [StringLength]
+  Validation automatique
+end note
+
+Controller -> IRepo : 3: GetByIdAsync(5)
+IRepo -> Repo : 3.1: Implementation
+Repo -> DbContext : 3.2: Posts.FindAsync(5)
+DbContext -> Database : 3.3: SELECT * FROM Posts WHERE Id = 5
+Database --> DbContext : 3.4: Post record
+DbContext --> Repo : 3.5: Post entity (tracked)
+Repo --> Controller : 3.6: Existing Post
+
+Controller -> ExistingPost : 4: Vérifier existence
+note right
+  if (post == null)
+    return NotFound()
+end note
+
+Controller -> ExistingPost : 5: Mettre à jour propriétés
+note right
+  post.Title = dto.Title
+  post.Content = dto.Content
+  post.Author = dto.Author
+end note
+
+Controller -> UpdatedPost : 5.1: Post modifié (en mémoire)
+
+Controller -> IRepo : 6: UpdateAsync(updatedPost)
+IRepo -> Repo : 6.1: Implementation
+Repo -> DbContext : 6.2: Posts.Update(post)
+
+note right of DbContext
+  <b>Change Tracker détecte:</b>
+  - Propriétés modifiées
+  - État: Modified
+  - Génération UPDATE SQL
+end note
+
+Repo -> DbContext : 6.3: SaveChangesAsync()
+DbContext -> Database : 6.4: UPDATE Posts SET ...\nWHERE Id = 5
+
+note right
+  UPDATE Posts SET
+    Title = 'Nouveau titre',
+    Content = 'Nouveau contenu',
+    Author = 'Auteur modifié'
+  WHERE Id = 5
+end note
+
+Database --> DbContext : 6.5: Rows affected = 1
+DbContext --> Repo : 6.6: Updated entity
+Repo --> Controller : 6.7: Post mis à jour
+
+Controller -> Controller : 7: Mapper Post → PostDto
+
+Controller --> Client : 8: 200 OK\n{PostDto}
+
+' Légende des interactions
+note as N1
+  <b>Types d'interactions:</b>
+  1. Requête HTTP
+  2-3. Validation et lecture
+  4-5. Vérification et modification
+  6. Persistance
+  7-8. Réponse
+end note
+
+note as N2
+  <b>Avantages de l'architecture:</b>
+  - Séparation des responsabilités
+  - Testabilité (Mocking IRepo)
+  - Change Tracking automatique
+  - Transaction implicite
+  - Validation déclarative
+end note
+
+@enduml

@@ -1,0 +1,82 @@
+@startuml use-case-diagram
+
+!theme plain
+skinparam actorStyle awesome
+skinparam shadowing false
+skinparam backgroundColor white
+
+left to right direction
+
+' Acteurs
+actor "Utilisateur\nAPI" as User
+actor "Administrateur\nSystème" as Admin
+actor "Base de données\nMariaDB" as DB
+
+' Système
+rectangle "BlogApi - Système de gestion d'articles" {
+    
+    ' Use cases principaux
+    usecase (Consulter la liste\ndes articles) as UC1
+    usecase (Consulter un\narticle spécifique) as UC2
+    usecase (Créer un\nnouvel article) as UC3
+    usecase (Modifier un\narticle existant) as UC4
+    usecase (Supprimer\nun article) as UC5
+    usecase (Vérifier la version\nde l'API) as UC6
+    
+    ' Use cases techniques
+    usecase (Valider les\ndonnées d'entrée) as UC7
+    usecase (Persister les\ndonnées) as UC8
+    usecase (Gérer les\nerreurs) as UC9
+    usecase (Logger les\nopérations) as UC10
+    
+    ' Use cases admin
+    usecase (Migrer la\nbase de données) as UC11
+    usecase (Consulter les\nlogs) as UC12
+}
+
+' Relations User
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+
+' Relations Admin
+Admin --> UC11
+Admin --> UC12
+Admin --> UC10
+
+' Include relationships
+UC3 .> UC7 : <<include>>
+UC4 .> UC7 : <<include>>
+UC3 .> UC8 : <<include>>
+UC4 .> UC8 : <<include>>
+UC5 .> UC8 : <<include>>
+
+UC1 .> UC9 : <<include>>
+UC2 .> UC9 : <<include>>
+UC3 .> UC9 : <<include>>
+UC4 .> UC9 : <<include>>
+UC5 .> UC9 : <<include>>
+
+' Relations avec DB
+UC8 --> DB
+
+' Notes
+note right of UC3
+  Validation automatique
+  via Data Annotations
+end note
+
+note bottom of UC8
+  Utilise Entity Framework
+  Core avec MariaDB
+end note
+
+note left of UC1
+  Supporte la pagination
+  pour les grandes listes
+end note
+
+@enduml

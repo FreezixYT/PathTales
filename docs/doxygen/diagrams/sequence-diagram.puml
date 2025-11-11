@@ -1,0 +1,109 @@
+@startuml sequence-diagram
+
+!theme plain
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 10
+skinparam maxmessagesize 250
+skinparam shadowing false
+
+title Création d'un nouvel article (POST /api/posts)
+
+actor "Client API" as Client
+participant "PostsController" as Controller <<REST API>>
+participant "IPostRepository" as Repository <<Interface>>
+participant "PostRepository" as RepoImpl <<Implementation>>
+participant "BlogDbContext" as DbContext <<EF Core>>
+database "MariaDB" as Database
+
+== Requête HTTP ==
+Client -> Controller : POST /api/posts\n{title, content, author}
+activate Controller
+
+Controller -> Controller : Valider PostCreateDto\n[Required], [StringLength]
+note right
+  Validation automatique
+  par ASP.NET Core
+  avec Data Annotations
+end note
+
+alt Validation échoue
+    Controller --> Client : 400 Bad Request\n{errors}
+    note right : Retour immédiat
+end
+
+== Transformation DTO → Model ==
+Controller -> Controller : Mapper PostCreateDto → Post
+note right
+  Post post = new Post {
+    Title = dto.Title,
+    Content = dto.Content,
+    Author = dto.Author,
+    CreatedAt = DateTime.UtcNow
+  }
+end note
+
+== Accès Repository ==
+Controller -> Repository : CreateAsync(post)
+activate Repository
+
+Repository -> RepoImpl : Appel implémentation concrète
+activate RepoImpl
+
+== Entity Framework Core ==
+RepoImpl -> DbContext : Posts.Add(post)
+activate DbContext
+note right : Change Tracker actif
+
+DbContext -> DbContext : MarkAsAdded(post)
+note right
+  État: EntityState.Added
+  Génération de la requête SQL
+end note
+
+RepoImpl -> DbContext : SaveChangesAsync()
+DbContext -> DbContext : Détecter changements\nGénérer INSERT SQL
+note right
+  INSERT INTO Posts
+  (Title, Content, Author, CreatedAt)
+  VALUES (?, ?, ?, ?)
+end note
+
+== Persistance en base ==
+DbContext -> Database : EXECUTE INSERT
+activate Database
+Database -> Database : Insérer enregistrement\nGénérer Id auto-increment
+Database --> DbContext : Id = 5
+deactivate Database
+
+DbContext --> RepoImpl : Post avec Id assigné
+deactivate DbContext
+
+RepoImpl --> Repository : Post complet
+deactivate RepoImpl
+
+Repository --> Controller : Post créé
+deactivate Repository
+
+== Transformation Model → DTO ==
+Controller -> Controller : Mapper Post → PostDto
+note right
+  PostDto response = new PostDto {
+    Id = post.Id,
+    Title = post.Title,
+    Content = post.Content,
+    Author = post.Author,
+    CreatedAt = post.CreatedAt
+  }
+end note
+
+== Réponse HTTP ==
+Controller --> Client : 201 Created\nLocation: /api/posts/5\n{PostDto}
+deactivate Controller
+
+note over Client, Database
+  <b>Temps de réponse typique:</b> 50-200ms
+  <b>Transaction:</b> Automatique (EF Core)
+  <b>Idempotence:</b> Non (POST)
+end note
+
+@enduml

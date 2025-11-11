@@ -1,6 +1,6 @@
 services:
   mongo:
-    image: mongo
+    image: mongo:latest
     restart: unless-stopped
     ports:
       - "27017:27017"
@@ -13,9 +13,11 @@ services:
       - ./mongo/datadb:/data/db
       - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
       MONGO_INITDB_DATABASE: pathTales
     networks:
-      - insta-network
+      - pathTales-networkk
 
   mongo-express:
     image: mongo-express
@@ -30,8 +32,8 @@ services:
       mongo:
         condition: service_healthy
     networks:
-      - insta-network
+      - pathTales-networkk
 
 networks:
-  insta-network:
+  pathTales-networkk:
     driver: bridge

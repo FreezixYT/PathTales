@@ -1,0 +1,303 @@
+\doxysection{Blog\+Api -\/ Documentation technique complète}
+\hypertarget{index}{}\label{index}\index{BlogApi -\/ Documentation technique complète@{BlogApi -\/ Documentation technique complète}}
+\label{index_md_docs_2doxygen_2MAINPAGE}%
+\Hypertarget{index_md_docs_2doxygen_2MAINPAGE}%
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Présentation du projet}{Présentation du projet}}\label{index_autotoc_md2}
+{\bfseries{Blog\+Api}} est une API REST développée en {\bfseries{ASP.\+NET Core 8.\+0}} pour la gestion complète d\textquotesingle{}articles de blog. Ce projet implémente les bonnes pratiques de développement d\textquotesingle{}API modernes avec une architecture en couches claire et maintenable.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Informations générales}{Informations générales}}\label{index_autotoc_md3}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Propriété   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valeur    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Propriété   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Valeur    }\\\cline{1-2}
+\endhead
+{\bfseries{Nom}}   &Blog\+Api    \\\cline{1-2}
+{\bfseries{Version}}   &1.\+0.\+0    \\\cline{1-2}
+{\bfseries{Framework}}   &.NET 8.\+0 (ASP.\+NET Core)    \\\cline{1-2}
+{\bfseries{Base de données}}   &Maria\+DB 10.\+11    \\\cline{1-2}
+{\bfseries{ORM}}   &Entity Framework Core 9.\+0    \\\cline{1-2}
+{\bfseries{Auteur}}   &\mbox{[}Votre nom -\/ À personnaliser\mbox{]}    \\\cline{1-2}
+{\bfseries{Date}}   &\mbox{[}Date -\/ À personnaliser\mbox{]}   \\\cline{1-2}
+\end{longtabu}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Objectifs du projet}{Objectifs du projet}}\label{index_autotoc_md5}
+Ce projet a été développé dans le cadre du cours {\bfseries{APROG (Programmation Avancée)}} et démontre les compétences suivantes \+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Architecture en couches}} \+: Séparation claire des responsabilités (Controllers, Models, DTOs, Repositories, Persistence)
+\item {\bfseries{Patterns de conception}} \+: Repository Pattern, DTO Pattern
+\item {\bfseries{Entity Framework Core}} \+: ORM pour l\textquotesingle{}accès aux données avec migrations
+\item {\bfseries{API RESTful}} \+: Respect des conventions REST (GET, POST, PUT, DELETE)
+\item {\bfseries{Validation des données}} \+: Data Annotations pour garantir l\textquotesingle{}intégrité
+\item {\bfseries{Documentation API}} \+: Swagger/\+Open\+API pour la documentation interactive
+\item {\bfseries{Conteneurisation}} \+: Docker Compose pour Maria\+DB et php\+My\+Admin
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Architecture}{Architecture}}\label{index_autotoc_md7}
+Le projet suit une architecture en couches qui sépare les préoccupations \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{┌─────────────────────────────────────────┐}
+\DoxyCodeLine{│\ \ \ \ \ \ \ \ \ Controllers\ (API\ Layer)\ \ \ \ \ \ \ \ \ │\ \ ←\ Points\ d'entrée\ HTTP}
+\DoxyCodeLine{│\ \ -\/\ PostsController\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{│\ \ -\/\ VersionController\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{└─────────────────┬───────────────────────┘}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{┌─────────────────▼───────────────────────┐}
+\DoxyCodeLine{│\ \ \ \ \ \ \ \ \ \ \ \ \ \ DTOs\ Layer\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │\ \ ←\ Objets\ de\ transfert}
+\DoxyCodeLine{│\ \ -\/\ PostDto\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{│\ \ -\/\ PostCreateDto\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{│\ \ -\/\ PostUpdateDto\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{└─────────────────┬───────────────────────┘}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{┌─────────────────▼───────────────────────┐}
+\DoxyCodeLine{│\ \ \ \ \ \ \ \ \ Repository\ Layer\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │\ \ ←\ Logique\ d'accès\ aux\ données}
+\DoxyCodeLine{│\ \ -\/\ IPostRepository\ (Interface)\ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{│\ \ -\/\ PostRepository\ (Implémentation)\ \ \ \ \ \ │}
+\DoxyCodeLine{└─────────────────┬───────────────────────┘}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{┌─────────────────▼───────────────────────┐}
+\DoxyCodeLine{│\ \ \ \ \ \ \ \ \ \ Persistence\ Layer\ \ \ \ \ \ \ \ \ \ \ \ \ \ │\ \ ←\ Configuration\ EF\ Core}
+\DoxyCodeLine{│\ \ -\/\ BlogDbContext\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{│\ \ -\/\ Migrations\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{└─────────────────┬───────────────────────┘}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{┌─────────────────▼───────────────────────┐}
+\DoxyCodeLine{│\ \ \ \ \ \ \ \ \ \ \ \ Models\ Layer\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │\ \ ←\ Entités\ du\ domaine}
+\DoxyCodeLine{│\ \ -\/\ Post\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ │}
+\DoxyCodeLine{└─────────────────────────────────────────┘}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Diagrammes UML}{Diagrammes UML}}\label{index_autotoc_md8}
+Pour une meilleure compréhension de l\textquotesingle{}architecture, voici les diagrammes techniques \+:\hypertarget{index_autotoc_md9}{}\doxyparagraph{\texorpdfstring{1. Diagramme de classes}{1. Diagramme de classes}}\label{index_autotoc_md9}
+ 
+\begin{DoxyImage}
+\includegraphics[width=\textwidth]{class-diagram}
+\doxyfigcaption{Diagramme de classes complet}
+\end{DoxyImage}
+
+
+Ce diagramme montre toutes les classes de l\textquotesingle{}application et leurs relations.\hypertarget{index_autotoc_md10}{}\doxyparagraph{\texorpdfstring{2. Diagramme d\textquotesingle{}architecture (\+Composants)}{2. Diagramme d'architecture (Composants)}}\label{index_autotoc_md10}
+ 
+\begin{DoxyImage}
+\includegraphics[width=\textwidth]{architecture-diagram}
+\doxyfigcaption{Architecture du système}
+\end{DoxyImage}
+
+
+Ce diagramme illustre l\textquotesingle{}architecture globale du système avec Docker Compose.\hypertarget{index_autotoc_md11}{}\doxyparagraph{\texorpdfstring{3. Diagramme de paquetages}{3. Diagramme de paquetages}}\label{index_autotoc_md11}
+ 
+\begin{DoxyImage}
+\includegraphics[width=\textwidth]{package-diagram}
+\doxyfigcaption{Organisation en paquetages}
+\end{DoxyImage}
+
+
+Ce diagramme présente l\textquotesingle{}organisation en couches et les dépendances entre namespaces.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{Fonctionnalités principales}{Fonctionnalités principales}}\label{index_autotoc_md13}
+\hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{Opérations CRUD complètes}{Opérations CRUD complètes}}\label{index_autotoc_md14}
+L\textquotesingle{}API expose les endpoints suivants \+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Méthode   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Endpoint   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Méthode   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Endpoint   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+{\bfseries{GET}}   &{\ttfamily /api/posts}   &Liste tous les articles    \\\cline{1-3}
+{\bfseries{GET}}   &{\ttfamily /api/posts/\{id\}}   &Récupère un article spécifique    \\\cline{1-3}
+{\bfseries{POST}}   &{\ttfamily /api/posts}   &Crée un nouvel article    \\\cline{1-3}
+{\bfseries{PUT}}   &{\ttfamily /api/posts/\{id\}}   &Met à jour un article existant    \\\cline{1-3}
+{\bfseries{DELETE}}   &{\ttfamily /api/posts/\{id\}}   &Supprime un article    \\\cline{1-3}
+{\bfseries{GET}}   &{\ttfamily /health}   &Health check de l\textquotesingle{}API   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Diagrammes de cas d\textquotesingle{}utilisation}{Diagrammes de cas d'utilisation}}\label{index_autotoc_md15}
+\hypertarget{index_autotoc_md16}{}\doxyparagraph{\texorpdfstring{Cas d\textquotesingle{}utilisation principaux}{Cas d'utilisation principaux}}\label{index_autotoc_md16}
+ 
+\begin{DoxyImage}
+\includegraphics[width=\textwidth]{use-case-diagram}
+\doxyfigcaption{Diagramme de cas d\textquotesingle{}utilisation}
+\end{DoxyImage}
+
+
+Ce diagramme montre les interactions entre les utilisateurs et le système.\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{Flux de création d\textquotesingle{}un article}{Flux de création d'un article}}\label{index_autotoc_md17}
+\hypertarget{index_autotoc_md18}{}\doxyparagraph{\texorpdfstring{Diagramme de séquence -\/ POST /api/posts}{Diagramme de séquence - POST /api/posts}}\label{index_autotoc_md18}
+ 
+\begin{DoxyImage}
+\includegraphics[width=\textwidth]{sequence-diagram}
+\doxyfigcaption{Flux de création d\textquotesingle{}un article}
+\end{DoxyImage}
+
+
+Ce diagramme détaille le flux complet de création d\textquotesingle{}un article, de la requête HTTP jusqu\textquotesingle{}à la persistance en base.\hypertarget{index_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{Flux de mise à jour d\textquotesingle{}un article}{Flux de mise à jour d'un article}}\label{index_autotoc_md19}
+\hypertarget{index_autotoc_md20}{}\doxyparagraph{\texorpdfstring{Diagramme de communication -\/ PUT /api/posts/\{id\}}{Diagramme de communication - PUT /api/posts/\{id\}}}\label{index_autotoc_md20}
+ 
+\begin{DoxyImage}
+\includegraphics[width=\textwidth]{communication-diagram}
+\doxyfigcaption{Interactions lors d\textquotesingle{}une mise à jour}
+\end{DoxyImage}
+
+
+Ce diagramme montre les interactions entre objets lors de la mise à jour d\textquotesingle{}un article.\hypertarget{index_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{Validation automatique}{Validation automatique}}\label{index_autotoc_md21}
+Toutes les données entrantes sont validées automatiquement avec {\bfseries{Data Annotations}} \+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Titre}} \+: 3-\/150 caractères, requis
+\item {\bfseries{Contenu}} \+: minimum 3 caractères, requis
+\item {\bfseries{Created\+At}} \+: généré automatiquement (UTC)
+\end{DoxyItemize}\hypertarget{index_autotoc_md22}{}\doxysubsubsection{\texorpdfstring{Support CORS}{Support CORS}}\label{index_autotoc_md22}
+L\textquotesingle{}API est configurée pour accepter les requêtes du frontend Blazor ({\ttfamily \href{http://localhost:5170}{\texttt{ http\+://localhost\+:5170}}}).\hypertarget{index_autotoc_md23}{}\doxysubsubsection{\texorpdfstring{Migrations automatiques}{Migrations automatiques}}\label{index_autotoc_md23}
+Les migrations Entity Framework Core sont appliquées automatiquement au démarrage de l\textquotesingle{}application.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{Modèle de données}{Modèle de données}}\label{index_autotoc_md25}
+\hypertarget{index_autotoc_md26}{}\doxysubsubsection{\texorpdfstring{Entité Post}{Entité Post}}\label{index_autotoc_md26}
+L\textquotesingle{}entité principale {\bfseries{Post}} représente un article de blog \+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Propriété   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Propriété   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+{\ttfamily Id}   &{\ttfamily int}   &Clé primaire (auto-\/incrémentée)    \\\cline{1-3}
+{\ttfamily Title}   &{\ttfamily string}   &Titre de l\textquotesingle{}article    \\\cline{1-3}
+{\ttfamily Content}   &{\ttfamily string}   &Contenu complet de l\textquotesingle{}article    \\\cline{1-3}
+{\ttfamily Created\+At}   &{\ttfamily Date\+Time}   &Date et heure de création (UTC)   \\\cline{1-3}
+\end{longtabu}
+
+
+{\bfseries{Contraintes de la base de données \+:}}
+\begin{DoxyItemize}
+\item {\ttfamily Id} \+: PRIMARY KEY, AUTO\+\_\+\+INCREMENT
+\item {\ttfamily Title} \+: NOT NULL, LONGTEXT
+\item {\ttfamily Content} \+: NOT NULL, LONGTEXT
+\item {\ttfamily Created\+At} \+: NOT NULL, DATETIME(6)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md28}{}\doxysubsection{\texorpdfstring{Technologies utilisées}{Technologies utilisées}}\label{index_autotoc_md28}
+\hypertarget{index_autotoc_md29}{}\doxysubsubsection{\texorpdfstring{Backend}{Backend}}\label{index_autotoc_md29}
+
+\begin{DoxyItemize}
+\item {\bfseries{ASP.\+NET Core 8.\+0}} \+: Framework web moderne et performant
+\item {\bfseries{Entity Framework Core 9.\+0}} \+: ORM pour .NET
+\item {\bfseries{Pomelo.\+Entity\+Framework\+Core.\+My\+Sql 9.\+0}} \+: Provider My\+SQL/\+Maria\+DB
+\end{DoxyItemize}\hypertarget{index_autotoc_md30}{}\doxysubsubsection{\texorpdfstring{Base de données}{Base de données}}\label{index_autotoc_md30}
+
+\begin{DoxyItemize}
+\item {\bfseries{Maria\+DB 10.\+11}} \+: Système de gestion de base de données relationnel
+\item {\bfseries{php\+My\+Admin}} \+: Interface web pour la gestion de Maria\+DB
+\end{DoxyItemize}\hypertarget{index_autotoc_md31}{}\doxysubsubsection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md31}
+
+\begin{DoxyItemize}
+\item {\bfseries{Swashbuckle (Swagger)}} \+: Génération de documentation Open\+API
+\item {\bfseries{Doxygen}} \+: Génération de documentation technique avec code source
+\end{DoxyItemize}\hypertarget{index_autotoc_md32}{}\doxysubsubsection{\texorpdfstring{Outils de développement}{Outils de développement}}\label{index_autotoc_md32}
+
+\begin{DoxyItemize}
+\item {\bfseries{Docker Compose}} \+: Orchestration des conteneurs
+\item {\bfseries{Visual Studio 2022 / VS Code}} \+: Environnements de développement
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md34}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{index_autotoc_md34}
+\hypertarget{index_autotoc_md35}{}\doxysubsubsection{\texorpdfstring{Chaîne de connexion}{Chaîne de connexion}}\label{index_autotoc_md35}
+La connexion à la base de données est configurée dans {\ttfamily appsettings.\+json} \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ "{}ConnectionStrings"{}:\ \{}
+\DoxyCodeLine{\ \ \ \ "{}Default"{}:\ "{}Server=localhost;Port=3306;Database=blogdb;User=root;Password=example"{}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md36}{}\doxysubsubsection{\texorpdfstring{CORS}{CORS}}\label{index_autotoc_md36}
+Le CORS est configuré pour accepter les requêtes depuis \+:
+\begin{DoxyItemize}
+\item {\ttfamily \href{http://localhost:5170}{\texttt{ http\+://localhost\+:5170}}} (Frontend Blazor)
+\end{DoxyItemize}\hypertarget{index_autotoc_md37}{}\doxysubsubsection{\texorpdfstring{Swagger}{Swagger}}\label{index_autotoc_md37}
+L\textquotesingle{}interface Swagger est accessible en mode développement à \+:
+\begin{DoxyItemize}
+\item {\ttfamily \href{https://localhost:5001/swagger}{\texttt{ https\+://localhost\+:5001/swagger}}} (ou le port configuré)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md39}{}\doxysubsection{\texorpdfstring{Structure du code source}{Structure du code source}}\label{index_autotoc_md39}
+Ce document contient le code source complet de tous les fichiers du projet, organisé par namespace \+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Blog\+Api.\+Controllers}} \+: Contrôleurs API
+\item {\bfseries{Blog\+Api.\+Models}} \+: Entités du domaine
+\item {\bfseries{Blog\+Api.\+DTOs}} \+: Objets de transfert de données
+\item {\bfseries{Blog\+Api.\+Repositories}} \+: Interfaces et implémentations des repositories
+\item {\bfseries{Blog\+Api.\+Persistence}} \+: Configuration Entity Framework Core
+\end{DoxyEnumerate}
+
+Chaque classe inclut \+:
+\begin{DoxyItemize}
+\item Le code source complet avec coloration syntaxique
+\item Les commentaires XML pour la documentation
+\item Les dépendances et références
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md41}{}\doxysubsection{\texorpdfstring{Contexte pédagogique}{Contexte pédagogique}}\label{index_autotoc_md41}
+Ce projet a été réalisé dans le cadre des ateliers progressifs du cours APROG \+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Ateliers 1-\/4}} \+: Développement initial avec SQLite
+\item {\bfseries{Atelier 5}} \+: Migration vers Maria\+DB avec Docker
+\item {\bfseries{Ateliers suivants}} \+: Fonctionnalités avancées
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md43}{}\doxysubsection{\texorpdfstring{Contact et support}{Contact et support}}\label{index_autotoc_md43}
+Pour toute question concernant ce projet \+:
+\begin{DoxyItemize}
+\item {\bfseries{Enseignant}} \+: \mbox{[}Nom de l\textquotesingle{}enseignant\mbox{]}
+\item {\bfseries{Email}} \+: \mbox{[}Email\mbox{]}
+\item {\bfseries{Année}} \+: 2025-\/2026
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyNote}{Note}
+Cette documentation a été générée automatiquement avec {\bfseries{Doxygen}} pour le TPI (Travail Pratique Individuel).
+\end{DoxyNote}
+\begin{DoxyAuthor}{Auteur}
+\mbox{[}Votre nom -\/ À personnaliser\mbox{]} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\mbox{[}Date -\/ À personnaliser\mbox{]} 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}

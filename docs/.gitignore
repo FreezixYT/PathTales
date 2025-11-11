@@ -1,0 +1,6 @@
+# Dossier de sortie Doxygen (généré automatiquement)
+docs/doxygen-output/
+
+# Anciens PDFs de test
+docs/*.pdf
+!docs/README.md

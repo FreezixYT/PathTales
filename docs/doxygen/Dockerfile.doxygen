@@ -1,0 +1,35 @@
+# Dockerfile pour Doxygen + LaTeX (Version Alpine optimisée)
+# Génère la documentation technique avec code source au format PDF
+# Image fonctionnelle avec tous les outils nécessaires
+
+FROM alpine:3.19
+
+# Installer tous les outils nécessaires
+RUN apk add --no-cache \
+    doxygen \
+    graphviz \
+    ttf-freefont \
+    bash \
+    make \
+    perl \
+    texlive \
+    texlive-dvi \
+    texmf-dist-most \
+    openjdk17-jre-headless \
+    wget
+
+# Télécharger PlantUML
+RUN wget -q https://github.com/plantuml/plantuml/releases/download/v1.2024.7/plantuml-1.2024.7.jar -O /opt/plantuml.jar
+
+# Nettoyer le cache
+RUN rm -rf /var/cache/apk/* /tmp/*
+
+# Créer un répertoire de travail
+WORKDIR /docs
+
+# Copier le script de génération et le rendre exécutable
+COPY docs/doxygen/generate-with-plantuml.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/generate-with-plantuml.sh
+
+# Pas d'ENTRYPOINT pour permettre d'exécuter d'autres commandes
+CMD ["/usr/local/bin/generate-with-plantuml.sh"]

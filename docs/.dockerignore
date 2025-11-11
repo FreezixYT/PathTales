@@ -1,0 +1,46 @@
+# .dockerignore pour la stack de documentation
+# Exclure les fichiers inutiles du contexte Docker
+
+# Dossier de sortie (généré)
+docs/doxygen-output/
+
+# Binaires et obj
+**/bin/
+**/obj/
+
+# IDE et éditeurs
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+
+# NuGet
+*.nupkg
+**/packages/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Fichiers système
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Documentation déjà générée
+**/doxygen-output/
+
+# Node modules (si présent)
+node_modules/
+
+# Logs
+*.log
+logs/

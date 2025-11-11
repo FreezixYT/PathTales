@@ -1,0 +1,103 @@
+@startuml architecture-diagram
+
+!theme plain
+skinparam componentStyle rectangle
+skinparam shadowing false
+skinparam backgroundColor white
+
+' Client
+actor "Client\n(Postman/Browser)" as Client
+
+' Composants de l'application
+package "ASP.NET Core 8.0\nBlogApi Application" {
+    
+    component "API REST\nControllers" as API {
+        portin "HTTP/JSON" as HTTP_IN
+        portout "Responses" as HTTP_OUT
+    }
+    
+    component "Services\nBusiness Logic" as Services {
+        portin "Repository Interface" as REPO_IN
+    }
+    
+    component "Data Access\nRepositories" as Repositories {
+        portout "DbContext" as DB_OUT
+    }
+    
+    component "Entity Framework\nCore 9.0" as EF {
+        portin "LINQ" as LINQ_IN
+        portout "SQL" as SQL_OUT
+    }
+    
+    component "Configuration\nDependency Injection" as Config
+}
+
+' Base de données
+database "MariaDB 10.11\nblogdb" as DB {
+    storage "Table: Posts" as Posts_Table
+}
+
+' Container orchestration
+cloud "Docker Compose" as Docker {
+    component "mariadb\nservice" as MariaDB_Service
+    component "phpmyadmin\nservice" as PHPMyAdmin_Service
+    component "doxygen\nservice" as Doxygen_Service
+}
+
+' Flux de données
+Client --> HTTP_IN : "GET/POST/PUT/DELETE\n/api/posts"
+HTTP_OUT --> Client : "JSON Response\n(PostDto)"
+
+API --> REPO_IN : "Repository Methods\nGetAll(), Create(), etc."
+REPO_IN --> Repositories : "Async Operations"
+
+Repositories --> LINQ_IN : "LINQ Queries\nLambda Expressions"
+LINQ_IN --> EF : "Query Translation"
+
+SQL_OUT --> Posts_Table : "SQL Commands\nSELECT, INSERT, UPDATE, DELETE"
+
+Config ..> API : "Injects Dependencies"
+Config ..> Repositories : "Scoped Lifetime"
+Config ..> EF : "DbContext Configuration"
+
+MariaDB_Service --> DB : "Hosts Database"
+PHPMyAdmin_Service --> DB : "Management UI"
+
+' Notes techniques
+note right of API
+  <b>Endpoints:</b>
+  - GET /api/posts
+  - GET /api/posts/{id}
+  - POST /api/posts
+  - PUT /api/posts/{id}
+  - DELETE /api/posts/{id}
+  - GET /api/version
+end note
+
+note bottom of EF
+  <b>Provider:</b>
+  Pomelo.EntityFrameworkCore.MySql
+  
+  <b>Features:</b>
+  - Migrations automatiques
+  - Change Tracking
+  - LINQ to SQL
+end note
+
+note left of Docker
+  <b>Orchestration:</b>
+  - 3 services isolés
+  - Network blogapi-network
+  - Volume persistant
+  - Port mapping
+end note
+
+note as N1
+  <b>Architecture RESTful</b>
+  Stateless API
+  JSON Format
+  HTTP Status Codes
+  CRUD Operations
+end note
+
+@enduml

@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PathTalesBack: BlogApi - Documentation technique complète</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PathTalesBack<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">API REST pour la gestion d&#39;articles de blog - ASP.NET Core</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">BlogApi - Documentation technique complète </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Table des matières</h3>
+<ul><li class="level1"><a href="#autotoc_md2">Présentation du projet</a><ul><li class="level2"><a href="#autotoc_md3">Informations générales</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md5">Objectifs du projet</a></li>
+<li class="level1"><a href="#autotoc_md7">Architecture</a><ul><li class="level2"><a href="#autotoc_md8">Diagrammes UML</a><ul><li class="level3"><a href="#autotoc_md9">1. Diagramme de classes</a></li>
+<li class="level3"><a href="#autotoc_md10">2. Diagramme d&#39;architecture (Composants)</a></li>
+<li class="level3"><a href="#autotoc_md11">3. Diagramme de paquetages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md13">Fonctionnalités principales</a><ul><li class="level2"><a href="#autotoc_md14">Opérations CRUD complètes</a></li>
+<li class="level2"><a href="#autotoc_md15">Diagrammes de cas d&#39;utilisation</a><ul><li class="level3"><a href="#autotoc_md16">Cas d&#39;utilisation principaux</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md17">Flux de création d&#39;un article</a><ul><li class="level3"><a href="#autotoc_md18">Diagramme de séquence - POST /api/posts</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md19">Flux de mise à jour d&#39;un article</a><ul><li class="level3"><a href="#autotoc_md20">Diagramme de communication - PUT /api/posts/{id}</a></li>
+</ul>
+</li>
+<li class="level2"><a href="#autotoc_md21">Validation automatique</a></li>
+<li class="level2"><a href="#autotoc_md22">Support CORS</a></li>
+<li class="level2"><a href="#autotoc_md23">Migrations automatiques</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md25">Modèle de données</a><ul><li class="level2"><a href="#autotoc_md26">Entité Post</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md28">Technologies utilisées</a><ul><li class="level2"><a href="#autotoc_md29">Backend</a></li>
+<li class="level2"><a href="#autotoc_md30">Base de données</a></li>
+<li class="level2"><a href="#autotoc_md31">Documentation</a></li>
+<li class="level2"><a href="#autotoc_md32">Outils de développement</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md34">Configuration</a><ul><li class="level2"><a href="#autotoc_md35">Chaîne de connexion</a></li>
+<li class="level2"><a href="#autotoc_md36">CORS</a></li>
+<li class="level2"><a href="#autotoc_md37">Swagger</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md39">Structure du code source</a></li>
+<li class="level1"><a href="#autotoc_md41">Contexte pédagogique</a></li>
+<li class="level1"><a href="#autotoc_md43">Contact et support</a></li>
+</ul>
+</div>
+<div class="textblock"><p><a class="anchor" id="md_docs_2doxygen_2MAINPAGE"></a></p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+Présentation du projet</h1>
+<p><b>BlogApi</b> est une API REST développée en <b>ASP.NET Core 8.0</b> pour la gestion complète d'articles de blog. Ce projet implémente les bonnes pratiques de développement d'API modernes avec une architecture en couches claire et maintenable.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Informations générales</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Propriété   </th><th class="markdownTableHeadNone">Valeur    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Nom</b>   </td><td class="markdownTableBodyNone">BlogApi    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Version</b>   </td><td class="markdownTableBodyNone">1.0.0    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Framework</b>   </td><td class="markdownTableBodyNone">.NET 8.0 (ASP.NET Core)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Base de données</b>   </td><td class="markdownTableBodyNone">MariaDB 10.11    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>ORM</b>   </td><td class="markdownTableBodyNone">Entity Framework Core 9.0    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Auteur</b>   </td><td class="markdownTableBodyNone">[Votre nom - À personnaliser]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Date</b>   </td><td class="markdownTableBodyNone">[Date - À personnaliser]   </td></tr>
+</table>
+<hr  />
+<h1><a class="anchor" id="autotoc_md5"></a>
+Objectifs du projet</h1>
+<p>Ce projet a été développé dans le cadre du cours <b>APROG (Programmation Avancée)</b> et démontre les compétences suivantes :</p>
+<ol type="1">
+<li><b>Architecture en couches</b> : Séparation claire des responsabilités (Controllers, Models, DTOs, Repositories, Persistence)</li>
+<li><b>Patterns de conception</b> : Repository Pattern, DTO Pattern</li>
+<li><b>Entity Framework Core</b> : ORM pour l'accès aux données avec migrations</li>
+<li><b>API RESTful</b> : Respect des conventions REST (GET, POST, PUT, DELETE)</li>
+<li><b>Validation des données</b> : Data Annotations pour garantir l'intégrité</li>
+<li><b>Documentation API</b> : Swagger/OpenAPI pour la documentation interactive</li>
+<li><b>Conteneurisation</b> : Docker Compose pour MariaDB et phpMyAdmin</li>
+</ol>
+<hr  />
+<h1><a class="anchor" id="autotoc_md7"></a>
+Architecture</h1>
+<p>Le projet suit une architecture en couches qui sépare les préoccupations :</p>
+<div class="fragment"><div class="line">┌─────────────────────────────────────────┐</div>
+<div class="line">│         Controllers (API Layer)         │  ← Points d&#39;entrée HTTP</div>
+<div class="line">│  - PostsController                      │</div>
+<div class="line">│  - VersionController                    │</div>
+<div class="line">└─────────────────┬───────────────────────┘</div>
+<div class="line">                  │</div>
+<div class="line">┌─────────────────▼───────────────────────┐</div>
+<div class="line">│              DTOs Layer                 │  ← Objets de transfert</div>
+<div class="line">│  - PostDto                              │</div>
+<div class="line">│  - PostCreateDto                        │</div>
+<div class="line">│  - PostUpdateDto                        │</div>
+<div class="line">└─────────────────┬───────────────────────┘</div>
+<div class="line">                  │</div>
+<div class="line">┌─────────────────▼───────────────────────┐</div>
+<div class="line">│         Repository Layer                │  ← Logique d&#39;accès aux données</div>
+<div class="line">│  - IPostRepository (Interface)          │</div>
+<div class="line">│  - PostRepository (Implémentation)      │</div>
+<div class="line">└─────────────────┬───────────────────────┘</div>
+<div class="line">                  │</div>
+<div class="line">┌─────────────────▼───────────────────────┐</div>
+<div class="line">│          Persistence Layer              │  ← Configuration EF Core</div>
+<div class="line">│  - BlogDbContext                        │</div>
+<div class="line">│  - Migrations                           │</div>
+<div class="line">└─────────────────┬───────────────────────┘</div>
+<div class="line">                  │</div>
+<div class="line">┌─────────────────▼───────────────────────┐</div>
+<div class="line">│            Models Layer                 │  ← Entités du domaine</div>
+<div class="line">│  - Post                                 │</div>
+<div class="line">└─────────────────────────────────────────┘</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md8"></a>
+Diagrammes UML</h2>
+<p>Pour une meilleure compréhension de l'architecture, voici les diagrammes techniques :</p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+1. Diagramme de classes</h3>
+<div class="image">
+<img src="class-diagram.png" alt=""/>
+<div class="caption">
+Diagramme de classes complet</div></div>
+ <p>Ce diagramme montre toutes les classes de l'application et leurs relations.</p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+2. Diagramme d'architecture (Composants)</h3>
+<div class="image">
+<img src="architecture-diagram.png" alt=""/>
+<div class="caption">
+Architecture du système</div></div>
+ <p>Ce diagramme illustre l'architecture globale du système avec Docker Compose.</p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+3. Diagramme de paquetages</h3>
+<div class="image">
+<img src="package-diagram.png" alt=""/>
+<div class="caption">
+Organisation en paquetages</div></div>
+ <p>Ce diagramme présente l'organisation en couches et les dépendances entre namespaces.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md13"></a>
+Fonctionnalités principales</h1>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Opérations CRUD complètes</h2>
+<p>L'API expose les endpoints suivants :</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Méthode   </th><th class="markdownTableHeadNone">Endpoint   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>GET</b>   </td><td class="markdownTableBodyNone"><code>/api/posts</code>   </td><td class="markdownTableBodyNone">Liste tous les articles    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>GET</b>   </td><td class="markdownTableBodyNone"><code>/api/posts/{id}</code>   </td><td class="markdownTableBodyNone">Récupère un article spécifique    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>POST</b>   </td><td class="markdownTableBodyNone"><code>/api/posts</code>   </td><td class="markdownTableBodyNone">Crée un nouvel article    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>PUT</b>   </td><td class="markdownTableBodyNone"><code>/api/posts/{id}</code>   </td><td class="markdownTableBodyNone">Met à jour un article existant    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>DELETE</b>   </td><td class="markdownTableBodyNone"><code>/api/posts/{id}</code>   </td><td class="markdownTableBodyNone">Supprime un article    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>GET</b>   </td><td class="markdownTableBodyNone"><code>/health</code>   </td><td class="markdownTableBodyNone">Health check de l'API   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Diagrammes de cas d'utilisation</h2>
+<h3><a class="anchor" id="autotoc_md16"></a>
+Cas d'utilisation principaux</h3>
+<div class="image">
+<img src="use-case-diagram.png" alt=""/>
+<div class="caption">
+Diagramme de cas d'utilisation</div></div>
+ <p>Ce diagramme montre les interactions entre les utilisateurs et le système.</p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Flux de création d'un article</h2>
+<h3><a class="anchor" id="autotoc_md18"></a>
+Diagramme de séquence - POST /api/posts</h3>
+<div class="image">
+<img src="sequence-diagram.png" alt=""/>
+<div class="caption">
+Flux de création d'un article</div></div>
+ <p>Ce diagramme détaille le flux complet de création d'un article, de la requête HTTP jusqu'à la persistance en base.</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Flux de mise à jour d'un article</h2>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Diagramme de communication - PUT /api/posts/{id}</h3>
+<div class="image">
+<img src="communication-diagram.png" alt=""/>
+<div class="caption">
+Interactions lors d'une mise à jour</div></div>
+ <p>Ce diagramme montre les interactions entre objets lors de la mise à jour d'un article.</p>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Validation automatique</h2>
+<p>Toutes les données entrantes sont validées automatiquement avec <b>Data Annotations</b> :</p>
+<ul>
+<li><b>Titre</b> : 3-150 caractères, requis</li>
+<li><b>Contenu</b> : minimum 3 caractères, requis</li>
+<li><b>CreatedAt</b> : généré automatiquement (UTC)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md22"></a>
+Support CORS</h2>
+<p>L'API est configurée pour accepter les requêtes du frontend Blazor (<code><a href="http://localhost:5170">http://localhost:5170</a></code>).</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
+Migrations automatiques</h2>
+<p>Les migrations Entity Framework Core sont appliquées automatiquement au démarrage de l'application.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md25"></a>
+Modèle de données</h1>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Entité Post</h2>
+<p>L'entité principale <b>Post</b> représente un article de blog :</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Propriété   </th><th class="markdownTableHeadNone">Type   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Id</code>   </td><td class="markdownTableBodyNone"><code>int</code>   </td><td class="markdownTableBodyNone">Clé primaire (auto-incrémentée)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>Title</code>   </td><td class="markdownTableBodyNone"><code>string</code>   </td><td class="markdownTableBodyNone">Titre de l'article    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Content</code>   </td><td class="markdownTableBodyNone"><code>string</code>   </td><td class="markdownTableBodyNone">Contenu complet de l'article    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>CreatedAt</code>   </td><td class="markdownTableBodyNone"><code>DateTime</code>   </td><td class="markdownTableBodyNone">Date et heure de création (UTC)   </td></tr>
+</table>
+<p><b>Contraintes de la base de données :</b></p><ul>
+<li><code>Id</code> : PRIMARY KEY, AUTO_INCREMENT</li>
+<li><code>Title</code> : NOT NULL, LONGTEXT</li>
+<li><code>Content</code> : NOT NULL, LONGTEXT</li>
+<li><code>CreatedAt</code> : NOT NULL, DATETIME(6)</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md28"></a>
+Technologies utilisées</h1>
+<h2><a class="anchor" id="autotoc_md29"></a>
+Backend</h2>
+<ul>
+<li><b>ASP.NET Core 8.0</b> : Framework web moderne et performant</li>
+<li><b>Entity Framework Core 9.0</b> : ORM pour .NET</li>
+<li><b>Pomelo.EntityFrameworkCore.MySql 9.0</b> : Provider MySQL/MariaDB</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md30"></a>
+Base de données</h2>
+<ul>
+<li><b>MariaDB 10.11</b> : Système de gestion de base de données relationnel</li>
+<li><b>phpMyAdmin</b> : Interface web pour la gestion de MariaDB</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md31"></a>
+Documentation</h2>
+<ul>
+<li><b>Swashbuckle (Swagger)</b> : Génération de documentation OpenAPI</li>
+<li><b>Doxygen</b> : Génération de documentation technique avec code source</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md32"></a>
+Outils de développement</h2>
+<ul>
+<li><b>Docker Compose</b> : Orchestration des conteneurs</li>
+<li><b>Visual Studio 2022 / VS Code</b> : Environnements de développement</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md34"></a>
+Configuration</h1>
+<h2><a class="anchor" id="autotoc_md35"></a>
+Chaîne de connexion</h2>
+<p>La connexion à la base de données est configurée dans <code>appsettings.json</code> :</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;ConnectionStrings&quot;: {</div>
+<div class="line">    &quot;Default&quot;: &quot;Server=localhost;Port=3306;Database=blogdb;User=root;Password=example&quot;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
+CORS</h2>
+<p>Le CORS est configuré pour accepter les requêtes depuis :</p><ul>
+<li><code><a href="http://localhost:5170">http://localhost:5170</a></code> (Frontend Blazor)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md37"></a>
+Swagger</h2>
+<p>L'interface Swagger est accessible en mode développement à :</p><ul>
+<li><code><a href="https://localhost:5001/swagger">https://localhost:5001/swagger</a></code> (ou le port configuré)</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md39"></a>
+Structure du code source</h1>
+<p>Ce document contient le code source complet de tous les fichiers du projet, organisé par namespace :</p>
+<ol type="1">
+<li><b>BlogApi.Controllers</b> : Contrôleurs API</li>
+<li><b>BlogApi.Models</b> : Entités du domaine</li>
+<li><b>BlogApi.DTOs</b> : Objets de transfert de données</li>
+<li><b>BlogApi.Repositories</b> : Interfaces et implémentations des repositories</li>
+<li><b>BlogApi.Persistence</b> : Configuration Entity Framework Core</li>
+</ol>
+<p>Chaque classe inclut :</p><ul>
+<li>Le code source complet avec coloration syntaxique</li>
+<li>Les commentaires XML pour la documentation</li>
+<li>Les dépendances et références</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md41"></a>
+Contexte pédagogique</h1>
+<p>Ce projet a été réalisé dans le cadre des ateliers progressifs du cours APROG :</p>
+<ul>
+<li><b>Ateliers 1-4</b> : Développement initial avec SQLite</li>
+<li><b>Atelier 5</b> : Migration vers MariaDB avec Docker</li>
+<li><b>Ateliers suivants</b> : Fonctionnalités avancées</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md43"></a>
+Contact et support</h1>
+<p>Pour toute question concernant ce projet :</p><ul>
+<li><b>Enseignant</b> : [Nom de l'enseignant]</li>
+<li><b>Email</b> : [Email]</li>
+<li><b>Année</b> : 2025-2026</li>
+</ul>
+<hr  />
+<dl class="section note"><dt>Note</dt><dd>Cette documentation a été générée automatiquement avec <b>Doxygen</b> pour le TPI (Travail Pratique Individuel).</dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>[Votre nom - À personnaliser] </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>[Date - À personnaliser] </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0.0 </dd></dl>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré le Mardi 11 Novembre 2025 10:00:05 pour PathTalesBack par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

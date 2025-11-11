@@ -1,0 +1,103 @@
+@startuml package-diagram
+
+!theme plain
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam backgroundColor white
+
+' Couche Présentation
+package "Couche Présentation" #FFCCCC {
+    package "Controllers" {
+        [PostsController]
+        [VersionController]
+    }
+    
+    package "DTOs" {
+        [PostDto]
+        [PostCreateDto]
+        [PostUpdateDto]
+        [VersionResponse]
+    }
+}
+
+' Couche Métier / Domaine
+package "Couche Domaine" #CCFFCC {
+    package "Models" {
+        [Post]
+    }
+    
+    package "Repositories (Interfaces)" {
+        [IPostRepository]
+    }
+}
+
+' Couche Accès aux données
+package "Couche Accès aux Données" #CCCCFF {
+    package "Repositories (Implémentations)" {
+        [PostRepository]
+        [InMemoryPostRepository]
+    }
+    
+    package "Persistence" {
+        [BlogDbContext]
+    }
+}
+
+' Infrastructure externe
+package "Infrastructure" #FFFFCC {
+    database "MariaDB" {
+        [blogdb]
+    }
+    
+    package "Entity Framework Core" {
+        [EF Core]
+        [Pomelo MySQL Provider]
+    }
+}
+
+' Dépendances entre couches
+[PostsController] --> [IPostRepository] : utilise
+[PostsController] --> [PostDto] : utilise
+[PostsController] --> [PostCreateDto] : utilise
+[PostsController] --> [PostUpdateDto] : utilise
+[VersionController] --> [VersionResponse] : utilise
+
+[PostRepository] ..|> [IPostRepository] : implémente
+[InMemoryPostRepository] ..|> [IPostRepository] : implémente
+
+[PostRepository] --> [BlogDbContext] : utilise
+[PostRepository] --> [Post] : manipule
+[InMemoryPostRepository] --> [Post] : manipule
+
+[BlogDbContext] --> [Post] : mappe
+[BlogDbContext] --> [EF Core] : utilise
+[EF Core] --> [Pomelo MySQL Provider] : utilise
+[Pomelo MySQL Provider] --> [blogdb] : connecte
+
+' Notes explicatives
+note right of Controllers
+  Point d'entrée de l'API
+  Gère les requêtes HTTP
+  Validation automatique
+end note
+
+note right of "Repositories (Interfaces)"
+  Abstraction pour
+  l'inversion de dépendance
+  (Dependency Injection)
+end note
+
+note bottom of BlogDbContext
+  Configuration EF Core
+  Connexion MariaDB
+  Migrations automatiques
+end note
+
+note as N1
+  <b>Architecture en couches</b>
+  Séparation des responsabilités
+  Testabilité facilitée
+  Maintenance simplifiée
+end note
+
+@enduml

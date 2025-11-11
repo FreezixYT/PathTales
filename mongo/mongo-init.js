@@ -1,3 +1,6 @@
+db = new Mongo().getDB("pathTales");
+
+
 // User
 db.createCollection("User", {
   validator: {

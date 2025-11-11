@@ -16,7 +16,7 @@ namespace PathTalesBack.Controllers
        
         public UserController(MongoDbService mongoDbService) 
         {
-            _users = mongoDbService.Database?.GetCollection<User>("test");
+            _users = mongoDbService.Database?.GetCollection<User>("pathTales");
         }
 
         /// <summary>
