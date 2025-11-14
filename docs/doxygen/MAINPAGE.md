@@ -15,10 +15,10 @@
 | **Nom** | BlogApi |
 | **Version** | 1.0.0 |
 | **Framework** | .NET 8.0 (ASP.NET Core) |
-| **Base de données** | MariaDB 10.11 |
+| **Base de données** |MongoDB |
 | **ORM** | Entity Framework Core 9.0 |
-| **Auteur** | [Votre nom - À personnaliser] |
-| **Date** | [Date - À personnaliser] |
+| **Auteur** | Nathan Pache |
+| **Date** | 2025 |
 
 ---
 

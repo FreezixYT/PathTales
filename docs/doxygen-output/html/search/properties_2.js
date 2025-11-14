@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['email_0',['email',['../classPathTalesBack_1_1Entities_1_1Customer.html#a77f00023b8e2b08f1eba357435808c24',1,'PathTalesBack.Entities.Customer.Email'],['../classPathTalesBack_1_1Entities_1_1User.html#a22ddf0405e11e76ded63c6b41a918dd1',1,'PathTalesBack.Entities.User.Email']]]
+  ['database_0',['Database',['../classPathTalesBack_1_1Data_1_1MongoDbService.html#a32e2f667d2ba8be98e89421553725d18',1,'PathTalesBack::Data::MongoDbService']]],
+  ['description_1',['Description',['../classPathTalesBack_1_1Entities_1_1Story.html#a999dfc3bf50ac6d580969ff61627489f',1,'PathTalesBack::Entities::Story']]]
 ];

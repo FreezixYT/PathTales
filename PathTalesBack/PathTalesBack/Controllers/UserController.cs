@@ -16,13 +16,9 @@ namespace PathTalesBack.Controllers
        
         public UserController(MongoDbService mongoDbService) 
         {
-            _users = mongoDbService.Database?.GetCollection<User>("pathTales");
+            _users = mongoDbService.Database?.GetCollection<User>("User");
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         [HttpGet]
         public async Task<IEnumerable<User>> Get()
         {
@@ -31,7 +27,7 @@ namespace PathTalesBack.Controllers
 
         [HttpGet("{id}")]
         public async Task<ActionResult<User?>> GetById(string id)
-        {
+        {https://open.spotify.com/track/5Y8C6KjzBRKvcT3Aln1Bc4
             var filter = Builders<User>.Filter.Eq(x => x.Id, id);
             var user = _users.Find(filter).FirstOrDefault();
             return user is not null ? Ok(user) : NotFound();

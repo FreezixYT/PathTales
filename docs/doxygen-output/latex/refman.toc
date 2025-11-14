@@ -5,7 +5,7 @@
 \contentsline {subsubsection}{\numberline {1.1.1}Informations générales}{1}{subsubsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.2}Objectifs du projet}{1}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Architecture}{1}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Diagrammes UML}{1}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.1}Diagrammes UML}{2}{subsubsection.1.3.1}%
 \contentsline {paragraph}{1. Diagramme de classes}{2}{section*.1}%
 \contentsline {paragraph}{2. Diagramme d\textquotesingle {}architecture (\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Composants)}{2}{section*.3}%
 \contentsline {paragraph}{3. Diagramme de paquetages}{2}{section*.5}%
@@ -13,8 +13,8 @@
 \contentsline {subsubsection}{\numberline {1.4.1}Opérations CRUD complètes}{2}{subsubsection.1.4.1}%
 \contentsline {subsubsection}{\numberline {1.4.2}Diagrammes de cas d\textquotesingle {}utilisation}{2}{subsubsection.1.4.2}%
 \contentsline {paragraph}{Cas d\textquotesingle {}utilisation principaux}{2}{section*.7}%
-\contentsline {subsubsection}{\numberline {1.4.3}Flux de création d\textquotesingle {}un article}{2}{subsubsection.1.4.3}%
-\contentsline {paragraph}{Diagramme de séquence -\/ POST /api/posts}{2}{section*.9}%
+\contentsline {subsubsection}{\numberline {1.4.3}Flux de création d\textquotesingle {}un article}{3}{subsubsection.1.4.3}%
+\contentsline {paragraph}{Diagramme de séquence -\/ POST /api/posts}{3}{section*.9}%
 \contentsline {subsubsection}{\numberline {1.4.4}Flux de mise à jour d\textquotesingle {}un article}{3}{subsubsection.1.4.4}%
 \contentsline {paragraph}{Diagramme de communication -\/ PUT /api/posts/\{id\}}{3}{section*.11}%
 \contentsline {subsubsection}{\numberline {1.4.5}Validation automatique}{3}{subsubsection.1.4.5}%
@@ -22,9 +22,9 @@
 \contentsline {subsubsection}{\numberline {1.4.7}Migrations automatiques}{3}{subsubsection.1.4.7}%
 \contentsline {subsection}{\numberline {1.5}Modèle de données}{3}{subsection.1.5}%
 \contentsline {subsubsection}{\numberline {1.5.1}Entité Post}{3}{subsubsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.6}Technologies utilisées}{3}{subsection.1.6}%
-\contentsline {subsubsection}{\numberline {1.6.1}Backend}{3}{subsubsection.1.6.1}%
-\contentsline {subsubsection}{\numberline {1.6.2}Base de données}{3}{subsubsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6}Technologies utilisées}{4}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Backend}{4}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Base de données}{4}{subsubsection.1.6.2}%
 \contentsline {subsubsection}{\numberline {1.6.3}Documentation}{4}{subsubsection.1.6.3}%
 \contentsline {subsubsection}{\numberline {1.6.4}Outils de développement}{4}{subsubsection.1.6.4}%
 \contentsline {subsection}{\numberline {1.7}Configuration}{4}{subsection.1.7}%
@@ -32,82 +32,117 @@
 \contentsline {subsubsection}{\numberline {1.7.2}CORS}{4}{subsubsection.1.7.2}%
 \contentsline {subsubsection}{\numberline {1.7.3}Swagger}{4}{subsubsection.1.7.3}%
 \contentsline {subsection}{\numberline {1.8}Structure du code source}{4}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Contexte pédagogique}{4}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.9}Contexte pédagogique}{5}{subsection.1.9}%
 \contentsline {subsection}{\numberline {1.10}Contact et support}{5}{subsection.1.10}%
 \contentsline {section}{\numberline {2}Index des espaces de nommage}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Liste des paquetages}{5}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Index hiérarchique}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Hiérarchie des classes}{5}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Index des classes}{5}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Liste des classes}{5}{subsection.4.1}%
+\contentsline {section}{\numberline {4}Index des classes}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Liste des classes}{6}{subsection.4.1}%
 \contentsline {section}{\numberline {5}Index des fichiers}{6}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Liste des fichiers}{6}{subsection.5.1}%
 \contentsline {section}{\numberline {6}Documentation des espaces de nommage}{6}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back}{6}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers}{6}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{6}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities}{6}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.2}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers}{7}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data}{7}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Référence de l\textquotesingle {}espace de nommage Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities}{7}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Documentation des classes}{7}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Référence de la classe Controller\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base}{7}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Customer}{8}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Description détaillée}{8}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Documentation des propriétés}{8}{subsubsection.7.2.2}%
-\contentsline {paragraph}{Email}{8}{section*.21}%
-\contentsline {paragraph}{Id}{8}{section*.22}%
-\contentsline {paragraph}{UserName}{8}{section*.23}%
+\contentsline {subsection}{\numberline {7.1}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Paragraph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Choice}{7}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Description détaillée}{7}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Documentation des propriétés}{7}{subsubsection.7.1.2}%
+\contentsline {paragraph}{NextParagraphId}{7}{section*.19}%
+\contentsline {paragraph}{Text}{8}{section*.20}%
+\contentsline {subsection}{\numberline {7.2}Référence de la classe Controller\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base}{8}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mongo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Db\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service}{9}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Description détaillée}{9}{subsubsection.7.3.1}%
 \contentsline {subsubsection}{\numberline {7.3.2}Documentation des constructeurs et destructeur}{9}{subsubsection.7.3.2}%
-\contentsline {paragraph}{MongoDbService()}{9}{section*.28}%
+\contentsline {paragraph}{MongoDbService()}{9}{section*.27}%
 \contentsline {subsubsection}{\numberline {7.3.3}Documentation des données membres}{9}{subsubsection.7.3.3}%
-\contentsline {paragraph}{\_configuration}{9}{section*.29}%
-\contentsline {paragraph}{\_database}{10}{section*.30}%
+\contentsline {paragraph}{\_configuration}{9}{section*.28}%
+\contentsline {paragraph}{\_database}{10}{section*.29}%
 \contentsline {subsubsection}{\numberline {7.3.4}Documentation des propriétés}{10}{subsubsection.7.3.4}%
-\contentsline {paragraph}{Database}{10}{section*.31}%
-\contentsline {subsection}{\numberline {7.4}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User}{10}{subsection.7.4}%
+\contentsline {paragraph}{Database}{10}{section*.30}%
+\contentsline {subsection}{\numberline {7.4}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Paragraph}{10}{subsection.7.4}%
 \contentsline {subsubsection}{\numberline {7.4.1}Description détaillée}{10}{subsubsection.7.4.1}%
 \contentsline {subsubsection}{\numberline {7.4.2}Documentation des propriétés}{10}{subsubsection.7.4.2}%
-\contentsline {paragraph}{BlockReason}{10}{section*.34}%
-\contentsline {paragraph}{Email}{11}{section*.35}%
+\contentsline {paragraph}{Choices}{10}{section*.34}%
+\contentsline {paragraph}{EndingType}{11}{section*.35}%
 \contentsline {paragraph}{Id}{11}{section*.36}%
-\contentsline {paragraph}{IsBlocked}{11}{section*.37}%
-\contentsline {paragraph}{Name}{11}{section*.38}%
-\contentsline {paragraph}{Role}{11}{section*.39}%
-\contentsline {paragraph}{Token}{11}{section*.40}%
-\contentsline {subsection}{\numberline {7.5}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{12}{subsection.7.5}%
-\contentsline {subsubsection}{\numberline {7.5.1}Description détaillée}{13}{subsubsection.7.5.1}%
-\contentsline {subsubsection}{\numberline {7.5.2}Documentation des constructeurs et destructeur}{13}{subsubsection.7.5.2}%
-\contentsline {paragraph}{UserController()}{13}{section*.45}%
-\contentsline {subsubsection}{\numberline {7.5.3}Documentation des fonctions membres}{14}{subsubsection.7.5.3}%
-\contentsline {paragraph}{Create()}{14}{section*.46}%
-\contentsline {paragraph}{Delete()}{14}{section*.48}%
-\contentsline {paragraph}{Get()}{14}{section*.49}%
-\contentsline {paragraph}{GetById()}{14}{section*.50}%
-\contentsline {paragraph}{Update()}{15}{section*.52}%
-\contentsline {subsubsection}{\numberline {7.5.4}Documentation des données membres}{15}{subsubsection.7.5.4}%
-\contentsline {paragraph}{\_users}{15}{section*.53}%
-\contentsline {section}{\numberline {8}Documentation des fichiers}{15}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Référence du fichier docs/doxygen/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MAINPAGE.md}{15}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{15}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{15}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mongo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Db\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs}{16}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Mongo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Db\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{16}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Customer.cs}{16}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Customer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{17}{subsection.8.7}%
-\contentsline {subsection}{\numberline {8.8}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User.cs}{17}{subsection.8.8}%
-\contentsline {subsection}{\numberline {8.9}User.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{17}{subsection.8.9}%
-\contentsline {subsection}{\numberline {8.10}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Program.cs}{18}{subsection.8.10}%
-\contentsline {subsubsection}{\numberline {8.10.1}Documentation des fonctions}{18}{subsubsection.8.10.1}%
-\contentsline {paragraph}{AddControllers()}{18}{section*.64}%
-\contentsline {paragraph}{AddEndpointsApiExplorer()}{18}{section*.65}%
-\contentsline {paragraph}{AddSingleton$<$ MongoDbService $>$()}{18}{section*.66}%
-\contentsline {paragraph}{AddSwaggerGen()}{18}{section*.67}%
-\contentsline {paragraph}{if()}{18}{section*.68}%
-\contentsline {paragraph}{MapControllers()}{18}{section*.69}%
-\contentsline {paragraph}{Run()}{18}{section*.70}%
-\contentsline {paragraph}{UseAuthorization()}{18}{section*.71}%
-\contentsline {paragraph}{UseHttpsRedirection()}{18}{section*.72}%
-\contentsline {subsubsection}{\numberline {8.10.2}Documentation des variables}{19}{subsubsection.8.10.2}%
-\contentsline {paragraph}{app}{19}{section*.73}%
-\contentsline {paragraph}{builder}{19}{section*.74}%
-\contentsline {subsection}{\numberline {8.11}Program.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{19}{subsection.8.11}%
+\contentsline {paragraph}{Text}{11}{section*.37}%
+\contentsline {subsection}{\numberline {7.5}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Story.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rating}{11}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Description détaillée}{11}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}Documentation des propriétés}{11}{subsubsection.7.5.2}%
+\contentsline {paragraph}{Score}{11}{section*.40}%
+\contentsline {paragraph}{UserId}{11}{section*.41}%
+\contentsline {subsection}{\numberline {7.6}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Report}{12}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}Description détaillée}{12}{subsubsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.2}Documentation des propriétés}{12}{subsubsection.7.6.2}%
+\contentsline {paragraph}{Id}{12}{section*.44}%
+\contentsline {paragraph}{Reason}{12}{section*.45}%
+\contentsline {paragraph}{ReportedBy}{12}{section*.46}%
+\contentsline {paragraph}{Status}{12}{section*.47}%
+\contentsline {paragraph}{StoryId}{12}{section*.48}%
+\contentsline {subsection}{\numberline {7.7}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Story}{13}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}Description détaillée}{13}{subsubsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.2}Documentation des propriétés}{13}{subsubsection.7.7.2}%
+\contentsline {paragraph}{Categories}{13}{section*.52}%
+\contentsline {paragraph}{Description}{13}{section*.53}%
+\contentsline {paragraph}{Id}{14}{section*.54}%
+\contentsline {paragraph}{Paragraphs}{14}{section*.55}%
+\contentsline {paragraph}{Ratings}{14}{section*.56}%
+\contentsline {paragraph}{ReadCount}{14}{section*.57}%
+\contentsline {paragraph}{Status}{14}{section*.58}%
+\contentsline {paragraph}{Title}{14}{section*.59}%
+\contentsline {subsection}{\numberline {7.8}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User}{14}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}Description détaillée}{15}{subsubsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.2}Documentation des propriétés}{15}{subsubsection.7.8.2}%
+\contentsline {paragraph}{BlockReason}{15}{section*.62}%
+\contentsline {paragraph}{Email}{15}{section*.63}%
+\contentsline {paragraph}{Id}{15}{section*.64}%
+\contentsline {paragraph}{IsBlocked}{15}{section*.65}%
+\contentsline {paragraph}{Name}{15}{section*.66}%
+\contentsline {paragraph}{Password}{15}{section*.67}%
+\contentsline {paragraph}{Role}{15}{section*.68}%
+\contentsline {paragraph}{Token}{15}{section*.69}%
+\contentsline {subsection}{\numberline {7.9}Référence de la classe Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{16}{subsection.7.9}%
+\contentsline {subsubsection}{\numberline {7.9.1}Description détaillée}{17}{subsubsection.7.9.1}%
+\contentsline {subsubsection}{\numberline {7.9.2}Documentation des constructeurs et destructeur}{17}{subsubsection.7.9.2}%
+\contentsline {paragraph}{UserController()}{17}{section*.74}%
+\contentsline {subsubsection}{\numberline {7.9.3}Documentation des fonctions membres}{18}{subsubsection.7.9.3}%
+\contentsline {paragraph}{Create()}{18}{section*.75}%
+\contentsline {paragraph}{Delete()}{18}{section*.77}%
+\contentsline {paragraph}{Get()}{18}{section*.78}%
+\contentsline {paragraph}{GetById()}{18}{section*.79}%
+\contentsline {paragraph}{Update()}{18}{section*.81}%
+\contentsline {subsubsection}{\numberline {7.9.4}Documentation des données membres}{19}{subsubsection.7.9.4}%
+\contentsline {paragraph}{\_users}{19}{section*.82}%
+\contentsline {section}{\numberline {8}Documentation des fichiers}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Référence du fichier docs/doxygen/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}MAINPAGE.md}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controllers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.cs}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}User\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{19}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mongo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Db\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs}{20}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Mongo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Db\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{20}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Paragraph.cs}{20}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Paragraph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{20}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Report.cs}{21}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}Report.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{21}{subsection.8.9}%
+\contentsline {subsection}{\numberline {8.10}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Story.cs}{21}{subsection.8.10}%
+\contentsline {subsection}{\numberline {8.11}Story.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{22}{subsection.8.11}%
+\contentsline {subsection}{\numberline {8.12}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entities/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}User.cs}{22}{subsection.8.12}%
+\contentsline {subsection}{\numberline {8.13}User.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{22}{subsection.8.13}%
+\contentsline {subsection}{\numberline {8.14}Référence du fichier Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Path\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tales\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Back/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Program.cs}{23}{subsection.8.14}%
+\contentsline {subsubsection}{\numberline {8.14.1}Documentation des fonctions}{23}{subsubsection.8.14.1}%
+\contentsline {paragraph}{AddControllers()}{23}{section*.97}%
+\contentsline {paragraph}{AddEndpointsApiExplorer()}{23}{section*.98}%
+\contentsline {paragraph}{AddSingleton$<$ MongoDbService $>$()}{23}{section*.99}%
+\contentsline {paragraph}{AddSwaggerGen()}{23}{section*.100}%
+\contentsline {paragraph}{if()}{23}{section*.101}%
+\contentsline {paragraph}{MapControllers()}{24}{section*.102}%
+\contentsline {paragraph}{Run()}{24}{section*.103}%
+\contentsline {paragraph}{UseAuthorization()}{24}{section*.104}%
+\contentsline {paragraph}{UseHttpsRedirection()}{24}{section*.105}%
+\contentsline {subsubsection}{\numberline {8.14.2}Documentation des variables}{24}{subsubsection.8.14.2}%
+\contentsline {paragraph}{app}{24}{section*.106}%
+\contentsline {paragraph}{builder}{24}{section*.107}%
+\contentsline {subsection}{\numberline {8.15}Program.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{24}{subsection.8.15}%

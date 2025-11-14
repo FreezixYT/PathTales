@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
   0: "123_abcdefgijmnoprstuvà",
-  1: "cmu",
+  1: "cmprsu",
   2: "p",
-  3: "cmpu",
+  3: "mprsu",
   4: "acdgimru",
   5: "_ab",
-  6: "bdeinrtu",
+  6: "bcdeinprstu",
   7: "bcdt"
 };
 

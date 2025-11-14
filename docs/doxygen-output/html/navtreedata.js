@@ -53,7 +53,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Customer_8cs.html"
+"MongoDbService_8cs.html"
 ];
 
 var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';

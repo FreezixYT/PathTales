@@ -18,7 +18,7 @@ db.createCollection("User", {
           bsonType: "string"
         },
         token: {
-          bsonType: "string"
+          bsonType: ["string", "null"]
         },
         role: {
           enum: ["member", "admin"],
@@ -27,7 +27,7 @@ db.createCollection("User", {
           bsonType: "bool",
         },
         blockReason: {
-          bsonType: "string",
+          bsonType: ["string", "null"]
         }
       }
     }

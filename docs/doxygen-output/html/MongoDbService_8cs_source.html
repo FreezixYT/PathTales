@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('MongoDbService_8cs_source.html',''); i
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            var connectionString = <a class="code hl_variable" href="classPathTalesBack_1_1Data_1_1MongoDbService.html#a0f013e22701ff45d5e9688a6d2364c1f">_configuration</a>.GetConnectionString(<span class="stringliteral">&quot;DbConnection&quot;</span>);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            var mongoUrl = MongoUrl.Create(connectionString);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            var mongoClient = <span class="keyword">new</span> MongoClient(mongoUrl);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_variable" href="classPathTalesBack_1_1Data_1_1MongoDbService.html#afb985bfde64fc133964c8f11f8568ba5">_database</a> = mongoClient.GetDatabase(mongoUrl.DatabaseName);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_variable" href="classPathTalesBack_1_1Data_1_1MongoDbService.html#afb985bfde64fc133964c8f11f8568ba5">_database</a> = mongoClient.GetDatabase(<span class="stringliteral">&quot;pathTales&quot;</span>);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        }</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('MongoDbService_8cs_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_82e4744e1cb580d37970dd270cedd721.html">PathTalesBack</a></li><li class="navelem"><a class="el" href="dir_78c1d1d3159dd8c0c9330adbcbe74f89.html">PathTalesBack</a></li><li class="navelem"><a class="el" href="dir_16d0f837f5a45088bb035935fe40b011.html">Data</a></li><li class="navelem"><a class="el" href="MongoDbService_8cs.html">MongoDbService.cs</a></li>
-    <li class="footer">Généré le Mardi 11 Novembre 2025 10:00:05 pour PathTalesBack par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Généré le Vendredi 14 Novembre 2025 10:28:15 pour PathTalesBack par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

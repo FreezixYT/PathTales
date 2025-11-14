@@ -19,7 +19,7 @@
 \DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ var\ connectionString\ =\ \mbox{\hyperlink{classPathTalesBack_1_1Data_1_1MongoDbService_a0f013e22701ff45d5e9688a6d2364c1f}{\_configuration}}.GetConnectionString(\textcolor{stringliteral}{"{}DbConnection"{}});}
 \DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ var\ mongoUrl\ =\ MongoUrl.Create(connectionString);}
 \DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ var\ mongoClient\ =\ \textcolor{keyword}{new}\ MongoClient(mongoUrl);}
-\DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPathTalesBack_1_1Data_1_1MongoDbService_afb985bfde64fc133964c8f11f8568ba5}{\_database}}\ =\ mongoClient.GetDatabase(mongoUrl.DatabaseName);}
+\DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPathTalesBack_1_1Data_1_1MongoDbService_afb985bfde64fc133964c8f11f8568ba5}{\_database}}\ =\ mongoClient.GetDatabase(\textcolor{stringliteral}{"{}pathTales"{}});}
 \DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{MongoDbService_8cs_source_l00021}\mbox{\hyperlink{classPathTalesBack_1_1Data_1_1MongoDbService_a32e2f667d2ba8be98e89421553725d18}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IMongoDatabase?\ \mbox{\hyperlink{classPathTalesBack_1_1Data_1_1MongoDbService_a32e2f667d2ba8be98e89421553725d18}{Database}}\ =>\ \mbox{\hyperlink{classPathTalesBack_1_1Data_1_1MongoDbService_afb985bfde64fc133964c8f11f8568ba5}{\_database}};}
