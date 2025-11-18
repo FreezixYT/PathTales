@@ -1,16 +1,50 @@
-﻿@inherits LayoutComponentBase
+﻿@inject NavigationManager Navigation
+@inherits LayoutComponentBase
 <div class="page">
     <div class="sidebar">
         <NavMenu />
     </div>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">PathTales</span>
+            </a>
+
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link text-black">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-black">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-black">Histoire</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-black">About</a></li>
+
+                <li class="nav-item">
+                    <a @onclick="goProfile" class="nav-link text-white">
+                        <img height="20px" src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="pp" />
+                    </a>
+                </li>
+            </ul>
+        </header>
 
         <article class="content px-4">
             @Body
         </article>
     </main>
 </div>
+
+
+@code {
+    private bool connected = false;
+
+    private void goProfile()
+    {
+        if (connected == true)
+        {
+            Navigation.NavigateTo("/profile");
+        }
+        else
+        {
+            Navigation.NavigateTo("/login");
+        }
+    }
+}

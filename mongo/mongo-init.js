@@ -1,6 +1,5 @@
 db = new Mongo().getDB("pathTales");
 
-
 // User
 db.createCollection("User", {
   validator: {
@@ -8,27 +7,16 @@ db.createCollection("User", {
       bsonType: "object",
       required: ["name", "email"],
       properties: {
-        name: {
-          bsonType: "string",
-        },
-        email: {
-          bsonType: "string",
-        },
-        password: {
-          bsonType: "string"
-        },
-        token: {
-          bsonType: ["string", "null"]
-        },
+        name: { bsonType: "string" },
+        email: { bsonType: "string" },
+        password: { bsonType: "string" },
+        token: { bsonType: ["string", "null"] },
         role: {
-          enum: ["member", "admin"],
+          bsonType: "string",
+          enum: ["member", "admin"]
         },
-        isBlocked: {
-          bsonType: "bool",
-        },
-        blockReason: {
-          bsonType: ["string", "null"]
-        }
+        isBlocked: { bsonType: "bool" },
+        blockReason: { bsonType: ["string", "null"] }
       }
     }
   }
@@ -49,33 +37,29 @@ db.createCollection("Story", {
           bsonType: "string",
           maxLength: 500
         },
+        userId: {
+          bsonType: "objectId"
+        },
         paragraphs: {
           bsonType: "array",
-          items: {
-            bsonType: "objectId"
-          }
+          items: { bsonType: "objectId" }
         },
         status: {
+          bsonType: "string",
           enum: ["published", "hidden", "deleted"]
         },
         categories: {
           bsonType: "array",
-          items: {
-            bsonType: "string"
-          }
+          items: { bsonType: "string" }
         },
-        readCount: {
-          bsonType: "int",
-        },
+        readCount: { bsonType: "int" },
         ratings: {
           bsonType: "array",
           items: {
             bsonType: "object",
             required: ["userId", "score"],
             properties: {
-              userId: {
-                bsonType: "objectId"
-              },
+              userId: { bsonType: "objectId" },
               score: {
                 bsonType: "int",
                 minimum: 1,
@@ -94,7 +78,7 @@ db.createCollection("Paragraph", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      required: ["text", ""],
+      required: ["text"],
       properties: {
         text: {
           bsonType: "string",
@@ -119,45 +103,40 @@ db.createCollection("Paragraph", {
           }
         },
         endingType: {
+          bsonType: "string",
           enum: ["victory", "defeat", "neutral"]
         }
       }
     },
     if: {
-      properties: {
-        endingType: {
-          enum: ["victory", "defeat", "neutral"]
-        }
-      }
+      required: ["endingType"]
     },
     then: {
       properties: {
         choices: {
           bsonType: "array",
-          maxItems: 0,
+          maxItems: 0
         }
       }
     }
   }
 });
 
+// Report
 db.createCollection("Report", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
       required: ["storyId", "reportedBy", "reason"],
       properties: {
-        storyId: {
-          bsonType: "objectId"
-        },
-        reportedBy: {
-          bsonType: "objectId"
-        },
+        storyId: { bsonType: "objectId" },
+        reportedBy: { bsonType: "objectId" },
         reason: {
           bsonType: "string",
           maxLength: 500
         },
         status: {
+          bsonType: "string",
           enum: ["pending", "resolved"]
         }
       }
