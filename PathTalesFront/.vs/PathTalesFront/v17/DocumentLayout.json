@@ -3,16 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\createstory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\createstory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\model\\createstoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\createstoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -23,28 +62,8 @@
       "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\wwwroot\\css\\bootstrap\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\cours\\att_prog\\pathtales\\pathtalesfront\\pathtalesfront\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -66,24 +85,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Register.razor",
+              "RelativeToolTip": "PathTalesFront\\Pages\\Register.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T07:52:23.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\LoginRequest.cs",
               "RelativeDocumentMoniker": "PathTalesFront\\Model\\LoginRequest.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\LoginRequest.cs",
               "RelativeToolTip": "PathTalesFront\\Model\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T10:32:07.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Profile.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Profile.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Profile.razor",
@@ -102,27 +134,27 @@
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Login.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Login.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-18T10:12:12.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Home.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-18T09:18:50.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Layout\\NavMenu.razor",
@@ -130,12 +162,11 @@
               "RelativeToolTip": "PathTalesFront\\Layout\\NavMenu.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T09:58:51.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:58:51.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Program.cs",
               "RelativeDocumentMoniker": "PathTalesFront\\Program.cs",
@@ -143,12 +174,62 @@
               "RelativeToolTip": "PathTalesFront\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T09:16:46.4Z",
+              "WhenOpened": "2025-11-18T09:16:46.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.304\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AgIAAEoCAAAAAAAAAAAIwKMCAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-11-21T08:19:10.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateStory.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\CreateStory.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Pages\\CreateStory.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\CreateStory.razor",
+              "RelativeToolTip": "PathTalesFront\\Pages\\CreateStory.razor",
+              "ViewState": "AgIAAAsAAAAAAAAAAAD4vzwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-21T09:21:01.262Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "PathTalesFront\\Model\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\RegisterRequest.cs",
+              "RelativeToolTip": "PathTalesFront\\Model\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T07:58:49.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateStoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "RelativeDocumentMoniker": "PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "RelativeToolTip": "PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T09:21:49.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\App.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\App.razor",
@@ -156,12 +237,23 @@
               "RelativeToolTip": "PathTalesFront\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T09:30:29.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:30:29.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "PathTalesFront\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-18T09:25:00.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Weather.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Weather.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Weather.razor",
@@ -174,20 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "PathTalesFront\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "PathTalesFront\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T09:25:00.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\_Imports.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\_Imports.razor",
@@ -195,25 +274,24 @@
               "RelativeToolTip": "PathTalesFront\\_Imports.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-18T09:31:47.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:31:47.071Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Counter.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Counter.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-18T09:33:56.802Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
               "RelativeDocumentMoniker": "PathTalesFront\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -221,12 +299,11 @@
               "RelativeToolTip": "PathTalesFront\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-18T09:38:37.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:38:37.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "MainLayout.razor.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "PathTalesFront\\Layout\\MainLayout.razor.css",
@@ -234,12 +311,11 @@
               "RelativeToolTip": "PathTalesFront\\Layout\\MainLayout.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-18T09:34:43.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:34:43.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "app.css",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Cours\\ATT_PROG\\PathTales\\PathTalesFront\\PathTalesFront\\wwwroot\\css\\app.css",
               "RelativeDocumentMoniker": "PathTalesFront\\wwwroot\\css\\app.css",
@@ -247,8 +323,17 @@
               "RelativeToolTip": "PathTalesFront\\wwwroot\\css\\app.css",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAF0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-18T09:27:52.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T09:27:52.195Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

@@ -86,19 +86,12 @@ db.createCollection("Paragraph", {
         },
         choices: {
           bsonType: "array",
-          minItems: 2,
-          maxItems: 4,
           items: {
             bsonType: "object",
             required: ["text", "nextParagraphId"],
             properties: {
-              text: {
-                bsonType: "string",
-                maxLength: 200
-              },
-              nextParagraphId: {
-                bsonType: "objectId"
-              }
+              text: { bsonType: "string", maxLength: 200 },
+              nextParagraphId: { bsonType: "objectId" }
             }
           }
         },
@@ -106,16 +99,28 @@ db.createCollection("Paragraph", {
           bsonType: "string",
           enum: ["victory", "defeat", "neutral"]
         }
-      }
-    },
-    if: {
-      required: ["endingType"]
-    },
-    then: {
-      properties: {
-        choices: {
-          bsonType: "array",
-          maxItems: 0
+      },
+//test
+      if: {
+        properties: {
+          endingType: { bsonType: "string" }
+        }
+      },
+      then: {
+        properties: {
+          choices: {
+            bsonType: "array",
+            maxItems: 0
+          }
+        }
+      },
+      else: {
+        properties: {
+          choices: {
+            bsonType: "array",
+            minItems: 2,
+            maxItems: 4
+          }
         }
       }
     }

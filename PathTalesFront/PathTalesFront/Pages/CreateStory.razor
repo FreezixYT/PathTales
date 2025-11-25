@@ -1,0 +1,79 @@
+﻿@page "/CreateStory"
+@using PathTalesFront.Model
+@inject HttpClient Http
+
+<PageTitle>Crée une histoire | PathTales</PageTitle>
+
+<h3 class="text-center m-5">Inscription</h3>
+
+<form class="w-50 container" @onsubmit="CreateStory">
+    <div class="form-group">
+        <label>Nom de l'hitoire'</label>
+        <input type="text" class="form-control" @bind="storyName">
+    </div>
+
+    <div class="form-group">
+        <select class="form-select" aria-label="Choisier une categorie">
+            <option value="1">Romantique</option>
+            <option value="2">Aventure</option>
+            <option value="3">Tragedie</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" @bind="description">
+    </div>
+
+    <div class="form-group">
+        <label>Paragraph</label>
+        <input type="email" class="form-control" @bind="email">
+    </div>
+    <button type="button" @onclick="AddParagraph" class="btn btn-primary mt-1">Ajouter un paragraphe</button>
+    <button type="submit" class="btn btn-primary mt-1">Publier</button>
+</form>
+
+@code {
+
+    /*
+     * Pour chaque hitoire
+     * Titre
+     * Categorie
+     * Description
+     * Paragraphe
+     * 
+     */
+    private string storyName;
+    private string description;
+    private int categorie;
+    private string email;
+    private string password;
+
+    private void AddParagraph()
+    {
+        Console.WriteLine("Ajout paragraph");
+    }
+
+    private async Task CreateStory()
+    {
+        var data = new CreateStoryRequest
+        {
+            StoryName = storyName,
+            Description = description,
+        };
+
+        var response = await Http.PostAsJsonAsync("http://localhost:5038/Story", data);
+
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Histoire crée");
+        }
+        else
+        {
+            var msg = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Erreur : " + msg);
+        }
+
+    }
+}

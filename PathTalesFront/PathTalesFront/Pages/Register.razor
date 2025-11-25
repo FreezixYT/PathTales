@@ -1,0 +1,64 @@
+﻿docker@page "/register"
+@using PathTalesFront.Model
+@inject HttpClient Http
+
+<PageTitle>Register | PathTales</PageTitle>
+
+<h3 class="text-center m-5">Inscription</h3>
+
+<form class="w-50 container" @onsubmit="CreateAccount">
+    <div class="form-group">
+        <label>Prénom</label>
+        <input type="text" class="form-control" @bind="prenom">
+    </div>
+
+    <div class="form-group">
+        <label>Nom</label>
+        <input type="text" class="form-control" @bind="nom">
+    </div>
+
+    <div class="form-group">
+        <label>Address email</label>
+        <input type="email" class="form-control" @bind="email">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" @bind="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-1">Submit</button>
+</form>
+
+@code {
+    private string prenom;
+    private string nom;
+    private string email;
+    private string password;
+
+    private async Task CreateAccount()
+    {
+        var data = new RegisterRequest
+        {
+            Name = $"{prenom} {nom}",
+            Email = email,
+            Password = password,
+            Role = "member",
+            Token = null,
+            IsBlocked = false,
+            BlockReason = null
+        };
+
+        var response = await Http.PostAsJsonAsync("http://localhost:5038/User", data);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Compte créé !");
+        }
+        else
+        {
+            var msg = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Erreur : " + msg);
+        }
+    }
+}
