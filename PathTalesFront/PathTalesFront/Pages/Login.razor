@@ -1,6 +1,9 @@
 ﻿@page "/login"
 @using PathTalesFront.Model
+@inject NavigationManager Navigation
 @inject HttpClient Http
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Newtonsoft.Json
  
 <PageTitle>Login | PathTales</PageTitle>
 
@@ -24,24 +27,49 @@
     private string email;
     private string password;
 
-    private async Task HandleLogin()
+    private async Task HandleLogin(EventArgs e)
     {
-        var data = new LoginRequest
+
+        var loginData = new LoginRequest
         {
             Email = email,
             Password = password
         };
 
-        var response = await Http.PostAsJsonAsync("http://localhost:5038/User/login", data);
+        var response = await Http.PostAsJsonAsync("http://localhost:5038/User/login", loginData);
 
         if (response.IsSuccessStatusCode)
         {
-            var token = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("connecter " + token);
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<LoginResponse>(responseContent);
+
+            if (result != null)
+            {
+                await startSession(result.UserId, result.Token);
+                Navigation.NavigateTo("/");
+            }
+            else
+            {
+                Console.WriteLine("Erreur : réponse du serveur invalide");
+            }
         }
         else
         {
-            Console.WriteLine("Erreur de login");
+            Console.WriteLine("Erreur de login : " + response.StatusCode);
         }
     }
+
+    public class LoginResponse
+    {
+        public string UserId { get; set; }
+        public string Token { get; set; }
+    }
+
+
+    private async Task startSession(string userId, string token)
+    {
+        var session = new { UserId = userId, Token = token };
+        await localStorage.SetItemAsync("session", session);
+    }
+
 }

@@ -9,6 +9,7 @@ using PathTalesBack;
 using PathTalesBack.Data;
 using PathTalesBack.Entities;
 
+
 namespace PathTalesBack.Controllers
 {
     [Route("[controller]")]
@@ -101,7 +102,7 @@ namespace PathTalesBack.Controllers
         /// </summary>
         /// <param name="email"></param>
         /// <param name="password"></param>
-        /// <returns></returns>
+        /// <returns>Retourn l'user id et le token</returns>
         [HttpPost("login")]
         public async Task<ActionResult<User>> Login(string email, string password)
         {
@@ -111,10 +112,20 @@ namespace PathTalesBack.Controllers
             if (user == null)
                 return Unauthorized("Email incorrect");
 
-            if (!BCrypt.Net.BCrypt.Verify(password, user.Password))
+            if (password != user.Password)
+            {
                 return Unauthorized("Mot de passe incorrect");
+            }
+              
 
-            return Ok(user);
+            string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+
+            //mettre a jours dans la database
+            var update = Builders<User>.Update.Set(u => u.Token, token);
+            await _users.UpdateOneAsync(filter, update);
+
+            //retourn user id et token
+            return Ok(new { user.Id, Token = token });
         }
     }
 }

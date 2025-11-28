@@ -7,7 +7,7 @@ namespace PathTalesBack.Entities
     {
         [BsonId]
         [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+        public string? Id { get; set; } 
 
         [BsonElement("name"), BsonRepresentation(BsonType.String)]
         public string? Name { get; set; }
@@ -19,15 +19,15 @@ namespace PathTalesBack.Entities
         public string? Password { get; set; }
 
         [BsonElement("token"), BsonRepresentation(BsonType.String)]
-        public string? Token { get; set; }
+        public string? Token { get; set; } = null;
 
         [BsonElement("role"), BsonRepresentation(BsonType.String)]
-        public string? Role { get; set; }
+        public string? Role { get; set; } = "member";
 
         [BsonElement("isBlocked"), BsonRepresentation(BsonType.Boolean)]
-        public bool IsBlocked { get; set; }
+        public bool IsBlocked { get; set; } = false;
 
         [BsonElement("blockReason"), BsonRepresentation(BsonType.String)]
-        public string? BlockReason { get; set; }
+        public string? BlockReason { get; set; } = null;
     }
 }

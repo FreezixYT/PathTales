@@ -2,11 +2,12 @@
 @using PathTalesFront.Model
 @inject HttpClient Http
 
+
 <PageTitle>Crée une histoire | PathTales</PageTitle>
 
 <h3 class="text-center m-5">Inscription</h3>
 
-<form class="w-50 container" @onsubmit="CreateStory">
+<form class="w-50 container">
     <div class="form-group">
         <label>Nom de l'hitoire'</label>
         <input type="text" class="form-control" @bind="storyName">
@@ -25,11 +26,6 @@
         <input type="text" class="form-control" @bind="description">
     </div>
 
-    <div class="form-group">
-        <label>Paragraph</label>
-        <input type="email" class="form-control" @bind="email">
-    </div>
-    <button type="button" @onclick="AddParagraph" class="btn btn-primary mt-1">Ajouter un paragraphe</button>
     <button type="submit" class="btn btn-primary mt-1">Publier</button>
 </form>
 
@@ -40,7 +36,6 @@
      * Titre
      * Categorie
      * Description
-     * Paragraphe
      * 
      */
     private string storyName;
@@ -49,31 +44,5 @@
     private string email;
     private string password;
 
-    private void AddParagraph()
-    {
-        Console.WriteLine("Ajout paragraph");
-    }
-
-    private async Task CreateStory()
-    {
-        var data = new CreateStoryRequest
-        {
-            StoryName = storyName,
-            Description = description,
-        };
-
-        var response = await Http.PostAsJsonAsync("http://localhost:5038/Story", data);
-
-
-        if (response.IsSuccessStatusCode)
-        {
-            Console.WriteLine("Histoire crée");
-        }
-        else
-        {
-            var msg = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("Erreur : " + msg);
-        }
-
-    }
+}
 }

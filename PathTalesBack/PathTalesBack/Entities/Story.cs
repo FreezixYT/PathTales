@@ -5,40 +5,55 @@ using System.Collections.Generic;
 
 namespace PathTalesBack.Entities
 {
+    /// <summary>
+    /// Histoire
+    /// </summary>
     public class Story
     {
         [BsonId]
-        [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-        [BsonElement("title"), BsonRepresentation(BsonType.String)]
-        public string? Title { get; set; }
+        [BsonElement("title")]
+        public string Title { get; set; } = string.Empty;
 
-        [BsonElement("description"), BsonRepresentation(BsonType.String)]
-        public string? Description { get; set; }
+        [BsonElement("description")]
+        public string Description { get; set; } = string.Empty;
 
-        [BsonElement("paragraphs"), BsonRepresentation(BsonType.Array)]
-        public List<ObjectId>? Paragraphs { get; set; }
+        [BsonElement("userId")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? UserId { get; set; }
 
-        [BsonElement("status"), BsonRepresentation(BsonType.String)]
-        public string? Status { get; set; }
+        //sans paraphe par defaut
+        [BsonElement("paragraphs")]
+        public List<string> Paragraphs { get; set; } = new();
 
-        [BsonElement("categories"), BsonRepresentation(BsonType.Array)]
-        public List<string>? Categories { get; set; }
+        [BsonElement("status")]
+        public string Status { get; set; } = "hidden";
 
-        [BsonElement("readCount"), BsonRepresentation(BsonType.Int32)]
-        public int ReadCount { get; set; }
+        //sans avis par defaut
+        [BsonElement("categories")]
+        public List<string> Categories { get; set; } = new();
 
-        [BsonElement("ratings"), BsonRepresentation(BsonType.Array)]
-        public List<Rating>? Ratings { get; set; }
+        [BsonElement("readCount")]
+        public int ReadCount { get; set; } = 0;
 
+        [BsonElement("ratings")]
+        public List<Rating> Ratings { get; set; } = new();
+
+        /// <summary>
+        /// Avis avec un user id et une note, de 1 par defaut
+        /// </summary>
         public class Rating
         {
-            [BsonElement("userId"), BsonRepresentation(BsonType.ObjectId)]
-            public ObjectId UserId { get; set; }
+            [BsonElement("userId")]
+            [BsonRepresentation(BsonType.ObjectId)]
+            public string UserId { get; set; } = string.Empty;
 
-            [BsonElement("score"), BsonRepresentation(BsonType.Int32)]
-            public int Score { get; set; }
+            [BsonElement("score")]
+            public int Score { get; set; } = 1; 
         }
     }
+
+
 }

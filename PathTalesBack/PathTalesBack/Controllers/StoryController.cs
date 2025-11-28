@@ -64,19 +64,22 @@ namespace PathTalesBack.Controllers
         /// </summary>
         /// <param name="story"></param>
         /// <returns></returns>
-        [HttpPatch]
-        public async Task<ActionResult> Update(Story story)
+        [HttpPatch("{id}")]
+        public async Task<ActionResult> Update(string id, [FromBody] Story story)
         {
-            if (!ObjectId.TryParse(story.Id, out _))
+            if (!ObjectId.TryParse(id, out _))
                 return BadRequest("Id invalide");
 
-            var result = await _stories.ReplaceOneAsync(s => s.Id == story.Id, story);
+            story.Id = id;
+
+            var result = await _stories.ReplaceOneAsync(s => s.Id == id, story);
 
             if (result.MatchedCount == 0)
                 return NotFound();
 
-            return Ok();
+            return Ok(story);
         }
+
 
         /// <summary>
         /// Supprime une histoir grace à son id
