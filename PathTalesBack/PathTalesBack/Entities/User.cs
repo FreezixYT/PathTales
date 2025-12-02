@@ -21,8 +21,33 @@ namespace PathTalesBack.Entities
         [BsonElement("token"), BsonRepresentation(BsonType.String)]
         public string? Token { get; set; } = null;
 
+        /// <summary>
+        /// Role dois etre sois member sois admin sinon exeption
+        /// </summary>
         [BsonElement("role"), BsonRepresentation(BsonType.String)]
-        public string? Role { get; set; } = "member";
+        private string role = "member"; 
+
+        public string Role
+        {
+            get => role;
+            set
+            {
+                if (value == null)
+                {
+                    role = "member";
+                }
+                else if (value == "member" || value == "admin")
+                {
+                    role = value;
+                }
+                else
+                {
+                    throw new Exception("Erreur : rôle incorrect.");
+                }
+            }
+        }
+
+
 
         [BsonElement("isBlocked"), BsonRepresentation(BsonType.Boolean)]
         public bool IsBlocked { get; set; } = false;
