@@ -2,22 +2,22 @@
 @using PathTalesFront.Model
 @inject HttpClient Http
 
-
 <PageTitle>Crée une histoire | PathTales</PageTitle>
 
-<h3 class="text-center m-5">Inscription</h3>
+<h3 class="text-center m-5">Créer une histoire</h3>
 
-<form class="w-50 container">
+<form class="w-50 container" @onsubmit="CreateNewStory">
     <div class="form-group">
-        <label>Nom de l'hitoire'</label>
-        <input type="text" class="form-control" @bind="storyName">
+        <label>Nom de l'histoire</label>
+        <input type="text" class="form-control" @bind="title">
     </div>
 
     <div class="form-group">
-        <select class="form-select" aria-label="Choisier une categorie">
+        <label>Catégorie</label>
+        <select class="form-select" @bind="categorie">
             <option value="1">Romantique</option>
             <option value="2">Aventure</option>
-            <option value="3">Tragedie</option>
+            <option value="3">Tragédie</option>
         </select>
     </div>
 
@@ -30,19 +30,32 @@
 </form>
 
 @code {
-
-    /*
-     * Pour chaque hitoire
-     * Titre
-     * Categorie
-     * Description
-     * 
-     */
-    private string storyName;
+    private string title;
     private string description;
     private int categorie;
-    private string email;
-    private string password;
+    private string userId = "test";
 
-}
+    private async Task CreateNewStory()
+    {
+        var data = new CreateStoryRequest
+            {
+                Title = title,
+                Description = description,
+                Categories = categorie.ToString(),
+                UserId = userId
+            };
+
+        var response = await Http.PostAsync("http://localhost:5038/Story", JsonContent.Create(data));
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Histoire créée !");
+        }
+        else
+        {
+            var msg = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Erreur : " + msg);
+            Console.WriteLine("Status Code: " + response.StatusCode);
+        }
+    }
 }

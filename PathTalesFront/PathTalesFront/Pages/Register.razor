@@ -1,5 +1,6 @@
-﻿docker@page "/register"
+﻿@page "/register"
 @using PathTalesFront.Model
+@inject NavigationManager Navigation
 @inject HttpClient Http
 
 <PageTitle>Register | PathTales</PageTitle>
@@ -49,16 +50,19 @@
             BlockReason = null
         };
 
-        var response = await Http.PostAsJsonAsync("http://localhost:5038/User", data);
+        var response = await Http.PostAsync("http://localhost:5038/User", JsonContent.Create(data));
 
         if (response.IsSuccessStatusCode)
         {
             Console.WriteLine("Compte créé !");
+            Navigation.NavigateTo("/login");
         }
         else
         {
             var msg = await response.Content.ReadAsStringAsync();
             Console.WriteLine("Erreur : " + msg);
+            Console.WriteLine("Status Code: " + response.StatusCode);
         }
+
     }
 }

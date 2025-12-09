@@ -1,4 +1,4 @@
-﻿namespace PathTalesFront.Model
+﻿    namespace PathTalesFront.Model
 {
     public class RegisterRequest
     {

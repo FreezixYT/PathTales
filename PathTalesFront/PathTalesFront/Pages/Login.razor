@@ -29,19 +29,17 @@
 
     private async Task HandleLogin(EventArgs e)
     {
-
         var loginData = new LoginRequest
-        {
-            Email = email,
-            Password = password
-        };
+            {
+                Email = email,
+                Password = password
+            };
 
         var response = await Http.PostAsJsonAsync("http://localhost:5038/User/login", loginData);
 
         if (response.IsSuccessStatusCode)
         {
-            var responseContent = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<LoginResponse>(responseContent);
+            var result = await response.Content.ReadFromJsonAsync<LoginResponse>();
 
             if (result != null)
             {
@@ -50,14 +48,15 @@
             }
             else
             {
-                Console.WriteLine("Erreur : réponse du serveur invalide");
+                Console.WriteLine("Invalid server response.");
             }
         }
         else
         {
-            Console.WriteLine("Erreur de login : " + response.StatusCode);
+            Console.WriteLine($"Login failed: {response.StatusCode}");
         }
     }
+
 
     public class LoginResponse
     {

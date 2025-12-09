@@ -1,9 +1,13 @@
 ﻿namespace PathTalesFront.Model
 {
-    public class CreateStory
+    public class CreateStoryRequest
     {
-        public string storyName { get; set; }
-        public string Password { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+        public string userId { get; set; }
+        public string paragraphs { get; set; } = null;
+        public string status { get; set; } = "hidden";
+        public string categories { get; set; }
+        public int readCount { get; set; } = 0;
     }
-
 }
