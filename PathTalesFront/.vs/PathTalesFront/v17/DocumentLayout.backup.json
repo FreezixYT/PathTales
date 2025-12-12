@@ -3,16 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\profile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\createstory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\createstory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\model\\createstoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\createstoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,22 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\createstory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\createstory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|c:\\users\\admin\\desktop\\pathtales\\pathtalesfront\\pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9207AF0B-41FD-436E-9553-74A087E98859}|PathTalesFront\\PathTalesFront.csproj|solutionrelative:pathtalesfront\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,35 +66,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "PathTalesFront\\Model\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\RegisterRequest.cs",
-              "RelativeToolTip": "PathTalesFront\\Model\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T08:14:06.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\App.razor",
-              "RelativeDocumentMoniker": "PathTalesFront\\App.razor",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\App.razor",
-              "RelativeToolTip": "PathTalesFront\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "PathTalesFront\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T08:04:23.752Z"
+              "WhenOpened": "2025-12-12T09:47:08.291Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Program.cs",
               "RelativeDocumentMoniker": "PathTalesFront\\Program.cs",
@@ -82,56 +91,86 @@
               "RelativeToolTip": "PathTalesFront\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T08:04:17.297Z"
+              "WhenOpened": "2025-12-09T08:04:17.297Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "Profile.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Profile.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Profile.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Profile.razor",
+              "RelativeToolTip": "PathTalesFront\\Pages\\Profile.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T07:46:40.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Weather.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Weather.razor",
+              "RelativeToolTip": "PathTalesFront\\Pages\\Weather.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T07:58:52.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Login.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Login.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\Login.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-09T07:46:42.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Profile.razor",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Profile.razor",
-              "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Profile.razor",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Profile.razor",
-              "RelativeToolTip": "PathTalesFront\\Pages\\Profile.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T07:46:40.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Register.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Register.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Register.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Register.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\Register.razor",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T07:46:24.473Z"
+              "WhenOpened": "2025-12-09T07:46:24.473Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Home.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAlwDkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T07:46:17.584Z"
+              "WhenOpened": "2025-12-09T07:46:17.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "PathTalesFront\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T09:47:10.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -141,13 +180,40 @@
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\CreateStory.razor",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\CreateStory.razor",
               "RelativeToolTip": "PathTalesFront\\Pages\\CreateStory.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T07:46:13.504Z"
+              "WhenOpened": "2025-12-09T07:46:13.504Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "PathTalesFront\\Model\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\RegisterRequest.cs",
+              "RelativeToolTip": "PathTalesFront\\Model\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:14:06.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "PathTalesFront\\Model\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\LoginRequest.cs",
+              "RelativeToolTip": "PathTalesFront\\Model\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T10:24:05.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "PathTalesFront\\Pages\\Counter.razor",
@@ -155,7 +221,34 @@
               "RelativeToolTip": "PathTalesFront\\Pages\\Counter.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-09T07:46:09.556Z"
+              "WhenOpened": "2025-12-09T07:46:09.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateStoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "RelativeDocumentMoniker": "PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "RelativeToolTip": "PathTalesFront\\Model\\CreateStoryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T10:23:56.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\App.razor",
+              "RelativeDocumentMoniker": "PathTalesFront\\App.razor",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\PathTales\\PathTalesFront\\PathTalesFront\\App.razor",
+              "RelativeToolTip": "PathTalesFront\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T08:04:23.752Z",
+              "EditorCaption": ""
             }
           ]
         }

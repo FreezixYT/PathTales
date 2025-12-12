@@ -1,6 +1,7 @@
-﻿@page "/CreateStory"
+﻿@page "/createStory"
 @using PathTalesFront.Model
 @inject HttpClient Http
+@inject NavigationManager Navigation
 
 <PageTitle>Crée une histoire | PathTales</PageTitle>
 
@@ -14,10 +15,10 @@
 
     <div class="form-group">
         <label>Catégorie</label>
-        <select class="form-select" @bind="categorie">
-            <option value="1">Romantique</option>
-            <option value="2">Aventure</option>
-            <option value="3">Tragédie</option>
+        <select class="form-select" @bind="categories">
+            <option value="romantique">Romantique</option>
+            <option value="aventure">Aventure</option>
+            <option value="tragédie">Tragédie</option>
         </select>
     </div>
 
@@ -32,8 +33,8 @@
 @code {
     private string title;
     private string description;
-    private int categorie;
-    private string userId = "test";
+    private string categories;
+    private string userId = "6937d291226c3c3438840eb2";
 
     private async Task CreateNewStory()
     {
@@ -41,15 +42,17 @@
             {
                 Title = title,
                 Description = description,
-                Categories = categorie.ToString(),
-                UserId = userId
+                UserId = userId,
+                Categories = [categories],
             };
 
+        Console.WriteLine(data.Title);
         var response = await Http.PostAsync("http://localhost:5038/Story", JsonContent.Create(data));
 
         if (response.IsSuccessStatusCode)
         {
             Console.WriteLine("Histoire créée !");
+            Navigation.NavigateTo("/profile");
         }
         else
         {

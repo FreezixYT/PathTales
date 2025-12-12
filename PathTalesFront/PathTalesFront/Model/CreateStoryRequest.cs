@@ -2,12 +2,9 @@
 {
     public class CreateStoryRequest
     {
-        public string title { get; set; }
-        public string description { get; set; }
-        public string userId { get; set; }
-        public string paragraphs { get; set; } = null;
-        public string status { get; set; } = "hidden";
-        public string categories { get; set; }
-        public int readCount { get; set; } = 0;
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string UserId { get; set; }
+        public string[] Categories { get; set; }   
     }
 }

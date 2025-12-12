@@ -1,6 +1,63 @@
 ﻿@page "/profile"
-<h3>Profile</h3>
+@inject NavigationManager Navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject HttpClient Http
+
+<PageTitle>Profile | PathTales</PageTitle>
+
+<h3 class="text-center m-5">Mon profile</h3>
+
+@if (user == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>@user.Name </td>
+                    <td>@user.Email</td>
+                    <td>@user.Role</td>
+                </tr>
+            
+        </tbody>
+    </table>
+}
+
 
 @code {
+    private Profil? user;
+    private string id = "6937d291226c3c3438840eb2";
+    protected override async Task OnInitializedAsync()
+    {
+        user = await Http.GetFromJsonAsync<Profil>($"http://localhost:5038/User/{id}");
+    }
 
+    public class Profil
+    {
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Email { get; set; }
+
+        public string Password { get; set; }
+
+        public string Token { get; set; }
+
+        public string Role { get; set; }
+
+        public bool isBlocked { get; set; }
+
+        public string blockReason { get; set; } = null;
+    }
 }
