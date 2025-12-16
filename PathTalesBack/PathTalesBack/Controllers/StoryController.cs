@@ -48,6 +48,28 @@ namespace PathTalesBack.Controllers
         }
 
         /// <summary>
+        /// Chercher un histoir par mot clef
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        [HttpGet("search/{keyword}")]
+        public async Task<ActionResult<List<Story>>> GetByKeyWord(string keyword)
+        {
+            var filter = Builders<Story>.Filter.Regex(
+                s => s.Title,
+                new BsonRegularExpression(keyword, "i")
+            );
+
+            var stories = await _stories.Find(filter).ToListAsync();
+
+            if (!stories.Any())
+                return NotFound();
+
+            return Ok(stories);
+        }
+
+
+        /// <summary>
         /// Crée une histoire
         /// </summary>
         /// <param name="story"></param>

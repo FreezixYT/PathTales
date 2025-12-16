@@ -8,6 +8,9 @@ using MongoDB.Driver;
 using PathTalesBack;
 using PathTalesBack.Data;
 using PathTalesBack.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 namespace PathTalesBack.Controllers
@@ -95,37 +98,6 @@ namespace PathTalesBack.Controllers
             var filter = Builders<User>.Filter.Eq(x => x.Id, id);
             await _users.DeleteOneAsync(filter);
             return Ok();
-        }
-
-        /// <summary>
-        /// Verifie le mot de passe
-        /// </summary>
-        /// <param name="email"></param>
-        /// <param name="password"></param>
-        /// <returns>Retourn l'user id et le token</returns>
-        [HttpPost("login")]
-        public async Task<ActionResult<User>> Login(string email, string password)
-        {
-            var filter = Builders<User>.Filter.Eq(u => u.Email, email);
-            var user = await _users.Find(filter).FirstOrDefaultAsync();
-
-            if (user == null)
-                return Unauthorized("Email incorrect");
-
-            if (password != user.Password)
-            {
-                return Unauthorized("Mot de passe incorrect");
-            }
-              
-
-            string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
-
-            //mettre a jours dans la database
-            var update = Builders<User>.Update.Set(u => u.Token, token);
-            await _users.UpdateOneAsync(filter, update);
-
-            //retourn user id et token
-            return Ok(new { user.Id, Token = token });
         }
     }
 }

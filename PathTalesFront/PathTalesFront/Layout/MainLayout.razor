@@ -1,5 +1,7 @@
 ﻿@inject NavigationManager Navigation
 @inherits LayoutComponentBase
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
 <div class="page">
 
     <main>
@@ -30,7 +32,9 @@
 
 
 @code {
-    private bool connected = false;
+    private bool connected = await isConnected();
+
+
 
     private void goProfile()
     {
@@ -43,4 +47,11 @@
             Navigation.NavigateTo("/login");
         }
     }
+
+    private async Task isConnected(string token)
+    {
+        var session = await localStorage.GetItemAsync<string>("token");
+        return true;
+    }
+
 }
